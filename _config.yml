@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Frederik Creemers
 locale:           en_US
 url:
 
@@ -26,12 +26,12 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email:
-  disqus-shortname:
-  twitter: #username
+  name: Frederik Creemers
+  avatar: "http://gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200"
+  bio: "I love the web."
+  email: "frederikcreemers@gmail.com"
+  disqus-shortname: "bigblind"
+  twitter: "@_bigblind" #username
   facebook: #username
   google:
     plus: #username
@@ -40,22 +40,22 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+  github: "bigblind"
+  stackoverflow: "675311/bigblind" #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin:
+  xing:
+  instagram:
+  lastfm: 
+  tumblr: 
+  pinterest: 
+  foursquare: 
+  steam: 
+  dribbble: 
+  youtube:
+  soundcloud: 
+  weibo: 
+  flickr: 
+  codepen: 
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
