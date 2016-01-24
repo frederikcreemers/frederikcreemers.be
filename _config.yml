@@ -2,7 +2,7 @@
 
 title:            Frederik Creemers
 locale:           en_US
-url:
+url:              "http://frederikcreemers.be"
 
 
 # Jekyll configuration
@@ -35,11 +35,11 @@ owner:
   facebook: #username
   google:
     plus: #username
-    analytics:
+    analytics: "UA-29151209-2"
     verify:
     ad-client:
     ad-slot:
-  bing-verify:
+  bing-verify: "4B81870A678CD0F795DD225F497A2888"
   github: "bigblind"
   stackoverflow: "675311/bigblind" #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin:
