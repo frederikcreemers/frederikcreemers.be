@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Table Topics</title>
+    <style>
+    h1{
+        text-align:center;
+    }
+    table{
+        margin:auto;
+        border-collapse: collapse;
+    }
+    td{
+        width:150px;
+        height:150px;
+        border:3px solid black;
+        padding: 0;
+    }
+    td a{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+    td a:hover{
+        background-color: #EEE;
+    }
+    a img{
+        max-width:145px;
+        max-height:145px;
+        margin: auto;
+    }
+    </style>
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Click a cell to reveal an image</h1>
+    <table>
+    </table>
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script>
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    shuffle(a);
+    
+    $(document).ready(function(){
+        var $table = $("table");
+        for(var row=0; row<4; row++){
+            var $row = $("<tr></tr>");
+            for(var col=0; col<4; col++){
+                var $col = $("<td></td>");
+                var i = a[row*4 + col];
+                var image_url = "images/" +i + ".jpg";
+                $col.attr("i", i)
+                var $a = $("<a></a>")
+                $a.attr("data-featherlight", image_url);
+                $a.attr("href", "#");
+                $col.append($a);
+                $row.append($col);
+                $a.click(function(){
+                    var $img = $("<img>");
+                    $img.attr("src", $(this).attr("data-featherlight"));
+                    $(this).append($img);
+                    console.log("image appended");
+                });
+            }
+            $table.append($row);
+        }
+        
+    });
+    
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length; i; i -= 1) {
+            j = Math.floor(Math.random() * i);
+            x = a[i - 1];
+            a[i - 1] = a[j];
+            a[j] = x;
+        }
+    }
+    </script>
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
