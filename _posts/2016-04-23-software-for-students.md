@@ -2,7 +2,7 @@
 title: "Free (or Cheap) Software for IT Students"
 excerpt: "Many companies offer their software or services for free or for a reduced price for students."
 layout: "post"
-comments: true
+comments: "true"
 ---
 
 Many companies offer their software or services for free of for a reduced price for students. In most cases, I stumble upon these by accident, so I'm gathering them in one place. Let me know if you've found a student discount not listed here. I'm mostly focussing on software for IT/programming students.
