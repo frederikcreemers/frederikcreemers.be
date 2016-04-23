@@ -1,7 +1,7 @@
 ---
-layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+layout: archive
+excerpt: "My piece of the internet."
+author_profile: true
 image:
   feature: maze_header.png
   credit: WeGraphics

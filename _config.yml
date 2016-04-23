@@ -1,61 +1,196 @@
-# Site wide configuration
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
 
-title:            Frederik Creemers
-locale:           en_US
-url:              "http://frederikcreemers.be"
+# Site Settings
+locale                   : "en-US"
+title                    : "Frederik Creemers"
+title_separator          : "-"
+name                     : "Frederik Creemers"
+description              : "My piece of the internet."
+url                      : http://frederikcreemers.be
+baseurl                  : /
+gh_repo                  :
+teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : disqus
+  disqus:
+    shortname            : frederikcreemers
+
+# SEO Related
+google_site_verification :
+bing_site_verification   : "4B81870A678CD0F795DD225F497A2888"
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               : "_bigblind"
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+
+# Analytics
+analytics:
+  provider               : "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-29151209-2"
+
+# Google AdSense
+google_ad_client         :
+google_ad_slot           :
 
 
-# Jekyll configuration
+# Site Author
+author:
+  name             : "Frederik Creemers"
+  avatar           : "http://gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200"
+  bio              : "I love the web"
+  email            : "frederikcreemers@gmail.com"
+  uri              : "http://frederikcreemers.be"
+  bitbucket        :
+  codepen          : "bigblind"
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "bigblind"
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : "675311"
+  steam            :
+  tumblr           :
+  twitter          : "_bigblind"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
 
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: pygments
-sass:
-  sass_dir: _sass
-  style: compressed
-gems:
-  - jekyll-sitemap
 
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
 kramdown:
+  input: GFM
+  hard_wrap: false
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 
-# Site owner
-owner:
-  name: Frederik Creemers
-  avatar: "http://gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200"
-  bio: "I love the web."
-  email: "frederikcreemers@gmail.com"
-  disqus-shortname: "frederikcreemers"
-  twitter: "@_bigblind" #username
-  facebook: #username
-  google:
-    plus: #username
-    analytics: "UA-29151209-2"
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify: "4B81870A678CD0F795DD225F497A2888"
-  github: "bigblind"
-  stackoverflow: "675311/bigblind" #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin:
-  xing:
-  instagram:
-  lastfm: 
-  tumblr: 
-  pinterest: 
-  foursquare: 
-  steam: 
-  dribbble: 
-  youtube:
-  soundcloud: 
-  weibo: 
-  flickr: 
-  codepen: 
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+categories:
+  type: liquid
+  path: /categories/
+tags:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
