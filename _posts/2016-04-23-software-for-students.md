@@ -1,5 +1,5 @@
 ---
-title: "Software for (IT) Students"
+title: "Free (or Cheap) Software for IT Students"
 excerpt: "Many companies offer their software or services for free or for a reduced price for students."
 layout: "post"
 ---
