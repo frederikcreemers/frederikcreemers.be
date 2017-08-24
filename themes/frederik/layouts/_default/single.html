@@ -1,0 +1,6 @@
+{{define "content" }}
+    <h1><a href="{{.URL}}">{{.Title}}</a></h1>
+    <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> {{ .Date.Format "January 2, 2006" }}</span>
+    <hr />
+    {{.Content}}
+{{end}}

@@ -1,0 +1,62 @@
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <div id="wrapper">
+    <header class="mobile-only" id="mobile-header">
+      <button id="open-nav" class="mobile-only">
+          <i class="fa fa-bars" aria-label="Open menu"></i>
+      </button>
+      <span class="site-title">Frederik Creemers</span>
+    </header>
+    <nav id="nav">
+      <button class="fr mobile-only" id="close-nav">
+        <i class="fa fa-times" aria-label="Close menu"></i>
+      </button>
+      <div class="site-title">
+        Frederik Creemers
+        <img class="round" src="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+      </div>
+      <ul id="menu">
+        <li>
+          <a href="/">
+            Blog<i class="fa fa-rss"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            About<i class="fa fa-user"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/bigblind">
+            Github<i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/_bigblind">
+            Twitter<i class="fa fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section id="main">
+      {{block "main" . }}
+      {{if .Section}}
+        <h1 class="page-title">
+              {{.Section}}
+        </h1>
+      {{end}}
+      <section>
+      {{block "content" . }}
+      {{end}}
+      </section>
+      {{end}}
+    </section>
+    <section id="footer">
+        {{block "footer" . }}
+         &copy; 2017 Frederik Creemers
+         {{end}}
+    </section>
+    </div>
+</body>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Frederik Creemers</title>
+    <link>http://www.frederikcreemers.be/posts/</link>
+    <description>Recent content in Posts on Frederik Creemers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Aug 2017 23:56:29 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.frederikcreemers.be/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.frederikcreemers.be/posts/my-first-post/</link>
+      <pubDate>Tue, 22 Aug 2017 23:56:29 +0200</pubDate>
+      
+      <guid>http://www.frederikcreemers.be/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

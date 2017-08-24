@@ -1,0 +1,12 @@
+{{ define "content" }}
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+        {{ .Content }}
+        <hr />
+    {{ end }}
+    {{ range .Pages }}
+        <h2><a href="{{ .URL }}">{{ .Title }}</a></h2>
+        <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> {{ .Date.Format "January 2, 2006" }}</span>
+        {{ .Summary }}
+    {{ end }}
+{{ end }}
