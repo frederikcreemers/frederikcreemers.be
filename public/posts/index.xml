@@ -6,18 +6,21 @@
     <description>Recent content in Posts on Frederik Creemers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Aug 2017 23:56:29 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Jun 2017 17:10:06 +0200</lastBuildDate>
     
 	<atom:link href="http://www.frederikcreemers.be/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>http://www.frederikcreemers.be/posts/my-first-post/</link>
-      <pubDate>Tue, 22 Aug 2017 23:56:29 +0200</pubDate>
+      <title>How to Make Your Website Accessible to People Who Use Screen Magnifiers</title>
+      <link>http://www.frederikcreemers.be/posts/how-to-make-your-website-accessible-to-people-who-use-screen-magnifiers/</link>
+      <pubDate>Wed, 07 Jun 2017 17:10:06 +0200</pubDate>
       
-      <guid>http://www.frederikcreemers.be/posts/my-first-post/</guid>
-      <description></description>
+      <guid>http://www.frederikcreemers.be/posts/how-to-make-your-website-accessible-to-people-who-use-screen-magnifiers/</guid>
+      <description>There&amp;rsquo;s a lot of content out there on how to make your website accessible. But I haven&amp;rsquo;t seen much on the subject of accessibility to users of screen magnifiers. I&amp;rsquo;m one of them, and I frequently run into annoying issues on the web.
+In this article, I&amp;rsquo;ll give some tips on how you can make your website more accessible to users of screen magnifying software.
+Disclaimers:
+ This article is purely based on years of using the web with a screen magnifier.</description>
     </item>
     
   </channel>

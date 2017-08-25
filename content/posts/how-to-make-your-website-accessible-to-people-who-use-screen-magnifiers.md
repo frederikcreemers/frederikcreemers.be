@@ -1,7 +1,7 @@
 ---
 title: "How to Make Your Website Accessible to People Who Use Screen Magnifiers"
 date: 2017-06-07T17:10:06+02:00
-draft: true
+draft: false
 description: There's a lot of content out there on how to make your website accessible. But I haven't seen much on the subject of accessibility to users of screen magnifiers. I'm one of them, and I frequently run into annoying issues on the web.
 ---
 There's a lot of content out there on how to make your website accessible. But I haven't seen much on the subject of accessibility to users of screen magnifiers. I'm one of them, and I frequently run into annoying issues on the web.
