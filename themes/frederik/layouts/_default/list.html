@@ -6,7 +6,7 @@
     {{ end }}
     {{ range .Pages }}
         <h2><a href="{{ .URL }}">{{ .Title }}</a></h2>
-        <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> {{ .Date.Format "January 2, 2006" }}</span>
+        <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> {{ .Date.Format "January 2, 2006" }}</span><br />
         {{ .Summary }}
     {{ end }}
 {{ end }}
