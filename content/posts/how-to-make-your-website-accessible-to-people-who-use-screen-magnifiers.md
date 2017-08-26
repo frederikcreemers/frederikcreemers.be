@@ -18,7 +18,7 @@ In this article, I'll give some tips on how you can make your website more acces
 
 A screen magnifier is a piece of software that magnifies the screen (how unexpected!) It displays a portion of what would be on the screen, enlarged, either on the full screen, or on a region of the screen, leaving the rest unmagnified.
 
-As an example, here's what it looks like for me to browse the articles on the home page of this site:
+As an example, here's what it looks like for me to browse the articles on the home page of [dev.to](https://dev.to):
 
 ![](https://thepracticaldev.s3.amazonaws.com/i/oqoasmqwnnvep9ci2wri.gif)
 
@@ -39,21 +39,26 @@ This is the biggest annoyance for me, so I'm putting it first. If you only act o
 As you can see the tooltip might not be completely visible when the cursor is hovering over the information icon. I'd need to move the mouse to get it in full view, but that hides the tooltip. So I can never completely read the tooltip at the magnification level I want.
 
 The AWS Lambda console shows how this can be done better:
+
 ![In this image, the animation shows how the tooltip remains visible when the mouse cursor is moved from the information icon to the speech bubble, only disappearing when the cursor leaves the bubble.](https://thepracticaldev.s3.amazonaws.com/i/joqe6nq1e8l2h2bxup2u.gif)
 
 This is much nicer. I can move my mouse over to the speech bubble in order to read it. Another option would be to toggle the tooltip on click, making it clear to the user that the icon is clickable by making it look more like a button, and changing the cursor into a hand when hovering over it.
 
-#2. Don't obscure content when the mouse is hovering over it.
+# 2. Don't obscure content when the mouse is hovering over it.
 
-The most annoying recent example I've seen of this is [Kickstarter's pledge levels](https://www.kickstarter.com/projects/theproperpeople/forbidden-explorers-urban-exploration-documentary). ![Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay.](https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif)
+The most annoying recent example I've seen of this is [Kickstarter's pledge levels](https://www.kickstarter.com/projects/theproperpeople/forbidden-explorers-urban-exploration-documentary).
+
+![Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay.](https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif)
 
 I understand that they wanted to make the whole area into a huge "call to action" button when the mouse cursor is on it, but the overlay makes the underlying list of perks hard to read. A high-contrast border might have been equally visually distinctive, or changing the background of the text, keeping the text visible with good contrast.
 
-Another frequent example of this, is controls covering carousel/slider images or videos on hover. Here's [an example from TVL](https://www.tvl.be/programmas/weerbericht-weerbericht-6-juni-45243), a Belgian provincial television network. They clearly want to indicate that clicking the video will pause it. I think this is such a common interaction that such a big control isn't necessary, and even if it is, there are probably more usable ways of achieving it. ![Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player.](https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif)
+Another frequent example of this, is controls covering carousel/slider images or videos on hover. Here's [an example from TVL](https://www.tvl.be/programmas/weerbericht-weerbericht-6-juni-45243), a Belgian provincial television network. They clearly want to indicate that clicking the video will pause it. I think this is such a common interaction that such a big control isn't necessary, and even if it is, there are probably more usable ways of achieving it.
+
+![Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player.](https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif)
 
 You can summarize this and the previous point as "don't rely on mouse position for content."
 
-#3 Put the result of an action close to the place where the action was triggered.
+# 3 Put the result of an action close to the place where the action was triggered.
 
 An example here is [Digital Ocean](https://m.do.co/c/6e1ff92c19c3). (You get $10 in DigitalOcean credit if you sign up through that link, and I get credit if you spend $25)
 
@@ -72,5 +77,5 @@ Visually, I actually love how the search page looks. It just confused me a bit, 
 
 # That's it!
 
-At least as far as I can see. But maybe my view is just too narrow 😊. Are you running into similar other issues in this genre? Do you have remarks on the points I've covered? Please let me know in the comments.
+At least as far as I can see. But maybe my view is just too narrow 😊. Are you running into similar other issues in this genre? Do you have remarks on the points I've covered? Please let me know.
 

@@ -87,6 +87,10 @@ nav button /* The button to close the nav on mobile. */{
   z-index: 0;
 }
 
+#main img {
+    max-width:100%;
+}
+
 #menu{
   list-style:none;
   padding:0;
