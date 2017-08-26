@@ -49,6 +49,12 @@ body {
   padding-left:1rem;
 }
 
+#mobile-header .site-title {
+    font-size: 1.5rem;
+    line-height:1.5rem;
+    display:inline;
+}
+
 #mobile-header button, nav button{
   background-color: transparent;
   font-size: 2rem;
@@ -72,6 +78,9 @@ nav button /* The button to close the nav on mobile. */{
   font-size: 2rem;
   line-height: 5rem;
   text-align:center;
+  display:block;
+  color: white;
+  text-decoration:none;
 }
 
 #site-title img{
@@ -97,19 +106,19 @@ nav button /* The button to close the nav on mobile. */{
   width: 20rem;
   position: relative;
   float: right;
-  right: -3rem;
-  line-height:6rem;
+  right: -2rem;
+  line-height:4rem;
   margin-top:4rem;
   z-index:100;
 }
 
 #menu li{
-  font-size: 3rem;
-  border-radius: 3rem;
+  font-size: 2rem;
+  border-radius: 2rem;
   text-align:right;
   display:block;
-  height: 6rem;
-  margin-bottom:1rem;
+  height: 4rem;
+  margin-bottom:0.6rem;
   color:white;
 }
 
@@ -125,18 +134,18 @@ nav button /* The button to close the nav on mobile. */{
 }
 
 #menu i{
-  line-height:5.6rem;
-  width: 6rem;
-  height: 6rem;
+  line-height:3.86rem;
+  width: 4rem;
+  height: 4rem;
   float: right;
-  border: 0.2rem solid #5c0120;
+  border: 0.133rem solid #5c0120;
   border-radius:3rem;
   color: #5c0120;
   background-color:white;
   vertical-align: middle;
   text-align: center;
   margin-left: 0.5rem;
-  font-size: 5rem;
+  font-size: 2rem;
   transition: transform 1s;
 }
 
@@ -166,6 +175,10 @@ nav button /* The button to close the nav on mobile. */{
 #main section{
   background-color:white;
   padding: 2rem;
+}
+
+#main a {
+    color: #5c0120;
 }
 
 .postdate{

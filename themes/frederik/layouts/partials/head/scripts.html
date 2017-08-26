@@ -1,0 +1,22 @@
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var btn = document.getElementById("open-nav");
+    var btn2 = document.getElementById("close-nav");
+    var main = document.getElementById("main");
+    var nav = document.getElementById("nav");
+    var toggleNav = function(){
+      nav.classList.toggle("open");
+      console.log("toggle");
+    }
+    main.addEventListener("click", function(e){
+      console.log(e.target)
+      window.bbb = e.target;
+      if(! (e.target.id === "open-nav" || e.target.parentElement.id === "open-nav")){
+        nav.classList.remove("open");
+      }
+    })
+
+    btn.addEventListener("click", toggleNav);
+    btn2.addEventListener("click", toggleNav);
+});
+</script>
