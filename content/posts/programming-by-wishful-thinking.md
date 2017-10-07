@@ -3,14 +3,6 @@ title: "Programming by Wishful Thinking"
 date: 2017-10-06T15:35:38+02:00
 draft: false
 ---
-
----
-title: "Quick Tip: Programming by Wishful Thinking"
-published: true
-description: When you're solving a complex or challenging problem, this technique can help make it easier, and you get cleaner code as a side benefit!
-tags: problemsolving, quicktip
----
-
 You've probably heard the advice to break your work up into manageable chunks, or to break a complex problem down into simpler parts. This is a handy technique to use while programming as well
 
 You write a function to solve a particular problem, and you write it as if any complex functionality you wish for, has already been written. Afterwards,, you go fill in these functions, and apply the same technique.
