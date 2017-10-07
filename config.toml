@@ -2,3 +2,7 @@ baseURL = "http://www.frederikcreemers.be/"
 languageCode = "en-us"
 title = "Frederik Creemers"
 theme = "frederik"
+
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsOptions="linenos=true"
