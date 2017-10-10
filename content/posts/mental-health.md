@@ -1,6 +1,7 @@
 ---
 title: "Talk About Mental Health"
 date: 2017-10-10T00:06:10+02:00
+image: "/depression.jpg"
 draft: false
 ---
 
