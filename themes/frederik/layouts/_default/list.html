@@ -1,5 +1,7 @@
 {{ define "content" }}
+    {{if not .IsHome}}
     <h1>{{ .Title }}</h1>
+    {{end}}
     {{ if .Content }}
         {{ .Content }}
         <hr />
