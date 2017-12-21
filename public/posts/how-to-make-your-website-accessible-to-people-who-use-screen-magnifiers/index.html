@@ -6,13 +6,69 @@
 <meta name="auhtor" content="Frederik Creemers" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@_bigblind">
+<meta name="twitter:title" content="How to Make Your Website Accessible to People Who Use Screen Magnifiers">
+<meta name="twitter:description" content="There&#39;s a lot of content out there on how to make your website accessible. But I haven&#39;t seen much on the subject of accessibility to users of screen magnifiers. I&#39;m one of them, and I frequently run into annoying issues on the web." />
+
+<meta name="twitter:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+
 <meta name="generator" content="Hugo 0.26" />
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Make Your Website Accessible to People Who Use Screen Magnifiers" />
+<meta property="og:description" content="There&#39;s a lot of content out there on how to make your website accessible. But I haven&#39;t seen much on the subject of accessibility to users of screen magnifiers. I&#39;m one of them, and I frequently run into annoying issues on the web." />
+<meta property="og:site_name" content="Frederik Creemers">
+<meta property="og:url" content="http://www.frederikcreemers.be/posts/how-to-make-your-website-accessible-to-people-who-use-screen-magnifiers/" />
+<meta property="og:article:author:first_name" content="Frederik" />
+<meta property="og:article:author:last_name" content="Creemers" />
+<meta property="og:article:published_time" content="2017-06-07 17:10:06 &#43;0200 CEST">
+
+<meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200" />
+
 
 
     <link href="http://www.frederikcreemers.be/css/style.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+<link rel="icon" href="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=16" />
+<link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/www.frederikcreemers.be/webmention" />
     
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29151209-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-29151209-2');
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var btn = document.getElementById("open-nav");
+    var btn2 = document.getElementById("close-nav");
+    var main = document.getElementById("main");
+    var nav = document.getElementById("nav");
+    var toggleNav = function(){
+      nav.classList.toggle("open");
+      console.log("toggle");
+    }
+    main.addEventListener("click", function(e){
+      console.log(e.target)
+      window.bbb = e.target;
+      if(! (e.target.id === "open-nav" || e.target.parentElement.id === "open-nav")){
+        nav.classList.remove("open");
+      }
+    })
+
+    btn.addEventListener("click", toggleNav);
+    btn2.addEventListener("click", toggleNav);
+});
+</script>
 </head>
 </head>
 <body>
@@ -27,10 +83,10 @@
       <button class="fr mobile-only" id="close-nav">
         <i class="fa fa-times" aria-label="Close menu"></i>
       </button>
-      <div class="site-title">
-        Frederik Creemers
-        <img class="round" src="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
-      </div>
+      <a class="site-title h-card u-url u-uid" href="http://www.frederikcreemers.be">
+        <span class="p-name">Frederik Creemers</span>
+        <img class="round u-photo" src="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+      </a>
       <ul id="menu">
         <li>
           <a href="/">
@@ -43,12 +99,12 @@
           </a>
         </li>
         <li>
-          <a href="https://github.com/bigblind">
+          <a href="https://github.com/bigblind" rel="me">
             Github<i class="fa fa-github"></i>
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/_bigblind">
+          <a href="https://twitter.com/_bigblind" rel="me">
             Twitter<i class="fa fa-twitter"></i>
           </a>
         </li>
@@ -61,7 +117,7 @@
               posts
         </h1>
       
-      <section>
+      <article>
       
     <h1><a href="/posts/how-to-make-your-website-accessible-to-people-who-use-screen-magnifiers/">How to Make Your Website Accessible to People Who Use Screen Magnifiers</a></h1>
     <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> June 7, 2017</span>
@@ -84,7 +140,7 @@
 
 <p>A screen magnifier is a piece of software that magnifies the screen (how unexpected!) It displays a portion of what would be on the screen, enlarged, either on the full screen, or on a region of the screen, leaving the rest unmagnified.</p>
 
-<p>As an example, here&rsquo;s what it looks like for me to browse the articles on the home page of this site:</p>
+<p>As an example, here&rsquo;s what it looks like for me to browse the articles on the home page of <a href="https://dev.to">dev.to</a>:</p>
 
 <p><img src="https://thepracticaldev.s3.amazonaws.com/i/oqoasmqwnnvep9ci2wri.gif" alt="" /></p>
 
@@ -104,22 +160,27 @@
 
 <p>As you can see the tooltip might not be completely visible when the cursor is hovering over the information icon. I&rsquo;d need to move the mouse to get it in full view, but that hides the tooltip. So I can never completely read the tooltip at the magnification level I want.</p>
 
-<p>The AWS Lambda console shows how this can be done better:
-<img src="https://thepracticaldev.s3.amazonaws.com/i/joqe6nq1e8l2h2bxup2u.gif" alt="In this image, the animation shows how the tooltip remains visible when the mouse cursor is moved from the information icon to the speech bubble, only disappearing when the cursor leaves the bubble." /></p>
+<p>The AWS Lambda console shows how this can be done better:</p>
+
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/joqe6nq1e8l2h2bxup2u.gif" alt="In this image, the animation shows how the tooltip remains visible when the mouse cursor is moved from the information icon to the speech bubble, only disappearing when the cursor leaves the bubble." /></p>
 
 <p>This is much nicer. I can move my mouse over to the speech bubble in order to read it. Another option would be to toggle the tooltip on click, making it clear to the user that the icon is clickable by making it look more like a button, and changing the cursor into a hand when hovering over it.</p>
 
-<p>#2. Don&rsquo;t obscure content when the mouse is hovering over it.</p>
+<h1 id="2-don-t-obscure-content-when-the-mouse-is-hovering-over-it">2. Don&rsquo;t obscure content when the mouse is hovering over it.</h1>
 
-<p>The most annoying recent example I&rsquo;ve seen of this is <a href="https://www.kickstarter.com/projects/theproperpeople/forbidden-explorers-urban-exploration-documentary">Kickstarter&rsquo;s pledge levels</a>. <img src="https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif" alt="Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay." /></p>
+<p>The most annoying recent example I&rsquo;ve seen of this is <a href="https://www.kickstarter.com/projects/theproperpeople/forbidden-explorers-urban-exploration-documentary">Kickstarter&rsquo;s pledge levels</a>.</p>
+
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif" alt="Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay." /></p>
 
 <p>I understand that they wanted to make the whole area into a huge &ldquo;call to action&rdquo; button when the mouse cursor is on it, but the overlay makes the underlying list of perks hard to read. A high-contrast border might have been equally visually distinctive, or changing the background of the text, keeping the text visible with good contrast.</p>
 
-<p>Another frequent example of this, is controls covering carousel/slider images or videos on hover. Here&rsquo;s <a href="https://www.tvl.be/programmas/weerbericht-weerbericht-6-juni-45243">an example from TVL</a>, a Belgian provincial television network. They clearly want to indicate that clicking the video will pause it. I think this is such a common interaction that such a big control isn&rsquo;t necessary, and even if it is, there are probably more usable ways of achieving it. <img src="https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif" alt="Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player." /></p>
+<p>Another frequent example of this, is controls covering carousel/slider images or videos on hover. Here&rsquo;s <a href="https://www.tvl.be/programmas/weerbericht-weerbericht-6-juni-45243">an example from TVL</a>, a Belgian provincial television network. They clearly want to indicate that clicking the video will pause it. I think this is such a common interaction that such a big control isn&rsquo;t necessary, and even if it is, there are probably more usable ways of achieving it.</p>
+
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif" alt="Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player." /></p>
 
 <p>You can summarize this and the previous point as &ldquo;don&rsquo;t rely on mouse position for content.&rdquo;</p>
 
-<p>#3 Put the result of an action close to the place where the action was triggered.</p>
+<h1 id="3-put-the-result-of-an-action-close-to-the-place-where-the-action-was-triggered">3 Put the result of an action close to the place where the action was triggered.</h1>
 
 <p>An example here is <a href="https://m.do.co/c/6e1ff92c19c3">Digital Ocean</a>. (You get $10 in DigitalOcean credit if you sign up through that link, and I get credit if you spend $25)</p>
 
@@ -137,10 +198,10 @@
 
 <h1 id="that-s-it">That&rsquo;s it!</h1>
 
-<p>At least as far as I can see. But maybe my view is just too narrow 😊. Are you running into similar other issues in this genre? Do you have remarks on the points I&rsquo;ve covered? Please let me know in the comments.</p>
+<p>At least as far as I can see. But maybe my view is just too narrow 😊. Are you running into similar other issues in this genre? Do you have remarks on the points I&rsquo;ve covered? Please let me know.</p>
 
 
-      </section>
+      </article>
       
     </section>
     <section id="footer">
