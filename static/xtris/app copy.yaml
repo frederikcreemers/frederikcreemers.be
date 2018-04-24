@@ -1,0 +1,15 @@
+application: creetris
+version: "20"
+runtime: python
+api_version: 1
+
+
+handlers:
+
+- url: /(.*\.(gif|png|jpg|js|css|html|mp3))$
+  static_files: \1
+  upload: .*\.(gif|png|jpg|js|css|html|mp3)$
+
+- url: /
+  static_files: index.html
+  upload: index.html

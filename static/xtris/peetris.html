@@ -1,0 +1,46 @@
+i<!DOCTYPE html>
+<head>
+    <title>Peetris</title>
+    <style>
+    #back{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(nacht.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    canvas{
+        display:block;
+        margin: auto;
+    }
+    img{
+        display:none;
+    }
+    </style>
+    <script>
+    require = {
+        baseUrl: "/"
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js" data-main="tetris.js"></script>
+</head>
+<body>
+    <img src="faces/anne.jpg" id="anne">
+    <img src="faces/els.jpg" id="els">
+    <img src="faces/hilde.jpg" id="hilde">
+    <img src="faces/jan.jpg" id="jan">
+    <img src="faces/jos.jpg" id="jos">
+    <img src="faces/luc.png" id="luc">
+    <img src="faces/ria.jpg" id="ria">
+    <img src="faces/stefan.png" id="stefan">
+
+    <div id="back">
+        <canvas id="screen" width="520" height="800">
+        </canvas>
+    </div>
+</body>

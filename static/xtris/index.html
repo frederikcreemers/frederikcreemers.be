@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+    <title>Gelukkig Nieuwjaar!</title>
+
+    <!-- If Chrome Frame is enabled, let's use it! -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+    <meta name="Description" content="A Chrome Experiment to show Fireworks over London entirely in JavaScript using the Canvas tag.  A good test of browser performance when handling a large number of items." />
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+
+    <!-- Load Canvas support for IE8 and below (IE9 support Canvas) -->
+    <!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
+
+    <!-- Load the fireworks script and stylesheet -->
+    <script type="text/javascript" src="fireworks.js"></script>
+    <link type="text/css" href="fireworks.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="background">
+
+    <h1>Gelukkig nieuwjaar!</h1>
+    <div id="intro">
+        <p>Gelukkig nieuwjaar! Om het nieuwe jaar vrolijk te beginnen, leek een spelletje Creetris mij wel gepast. Wat is Creetris? De enige manier om dat te ontdekken, is het spel spelen!</p>
+        <a href="game.html">Speel Creetris!</a>
+    </div>
+    <script type="text/javascript">
+        // we need a full screen canvas, but the canvas tag doesn't support percentage widths
+        // so we simply write out the canvas tag using javascript
+        document.write('<canvas id="cv" width="'+$(window).width()+'" height="'+($(window).height()-100)+'" style="position:absolute;left:0;top:0;"></canvas>');
+        // obviously, this become wrong if the browser window changes size
+        // so we simply reload the page on resize
+    </script>
+
+    <div id="attributions">
+        Font: <a href="http://bitmapmania.m78.com/" target="_blank">BM Receipt</a>  via <a href="http://cufon.shoqolate.com/generate/" target="_blank">Cuf�n Generator</a>
+    </div>
+    </div>
+</body>
+</html>
