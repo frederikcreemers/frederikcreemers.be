@@ -1,6 +1,6 @@
 ---
 title: "About Me."
-date: 2017-10-13T17:25:55+02:00
+date: 2018-4-21T17:25:55+02:00
 draft: false
 layout: "pages"
 ---
@@ -22,4 +22,6 @@ My username on [twitter](https://twitter.com/_bigblind), [github](https://github
 I have dysplasia of the optic nerve. I'm not sure hot to express what I see and what I don't, because I don't know a percentage or measure to express it, and I've never had "normal" vision, so I have nothing to compare it to. I see almost nothing through my right eye, and quite a lot through my let eye (althoug I'm told compared to normal sight, it's still quite little).
 
 I still see enough to visually find my way around places, although I do use a cane, bot to eel steps and other obstacles, and to signal my impairment to others. On a computer, I usually use a screen magnifier to enlarge whatever is on the screen. on my phone I use a combination of the magnifier ad VoiceOver (IOS's screen reader).
+
+
 
