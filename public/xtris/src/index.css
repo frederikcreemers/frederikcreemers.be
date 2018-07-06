@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+*/
+
+h1{
+    font-size: 2rem;
+    color: yellow;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+strong{
+    font-weight: 700;
+    color: yellow;
+}
+
+.screen{
+    margin: 32px 0.35;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+.limit-width{
+    max-width:500px;
+}
+
+.center{
+    text-align:center;
+}
+
+.button{
+    background-color:#8659f4;
+    padding:0.35rem 1rem;
+    border-radius:1rem;
+    color: white;
+    text-decoration: none;
+    min-width: 100px;
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.button:hover{
+    border: 2px solid yellow;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .screen{
+        margin: 32px auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .screen{
+        margin: 32px auto;
+        max-width: 960px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .screen{
+        margin: 64px auto;
+        max-width: 960px;
+    }
+}

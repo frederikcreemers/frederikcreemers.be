@@ -1,0 +1,77 @@
+i<!DOCTYPE html>
+<head>
+    <title>Creetris</title>
+    <style>
+    #back{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(nacht.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    canvas{
+        display:block;
+        margin: auto;
+    }
+    img{
+        display:none;
+    }
+    #controls{
+        color:white;
+        position:absolute;
+        left: 0;
+        top: 0;
+        width:20%;
+        height:40p;
+        z-index:1000;
+    }
+    p{
+        padding:10px;
+    }
+    p strong{
+        color: yellow;
+    }
+    </style>
+    <script src="http://code.createjs.com/soundjs-0.6.0.min.js"></script></head>
+
+    <script>
+    createjs.Sound.registerSound("tetris.mp3", "music")
+    createjs.Sound.addEventListener("fileload", function(event){
+        if(event.id !== "music"){
+            return;
+        }
+        var music = createjs.Sound.play("music");
+        music.setLoop(-1);
+        music.setVolume(0.3);
+    })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js" data-main="tetris.js"></script>
+
+</head>
+<body>
+    <img src="faces/bomma.png" id="bomma">
+    <img src="faces/elisabeth.png" id="elisabeth">
+    <img src="faces/guido.png" id="guido">
+    <img src="faces/hilde.jpg" id="hilde">
+    <img src="faces/leen.png" id="leen">
+    <img src="faces/moniek.png" id="moniek">
+    <img src="faces/rita.png" id="rita">
+    <img src="faces/toon.png" id="toon">
+
+    <div id="back">
+        <canvas id="screen" width="520" height="800">
+        </canvas>
+        <div id="controls">
+            <p><strong>Besturing:</strong><br>Pijltjestoetsen link en rechts om naar links en rechts te bewegen.
+                <br>Pijltjestoets omlaag om sneller omlaag te bewegen.
+                <br>Pijltjestoets omhoog om het blokje te draaien.
+                <br>Spatiebalk om het blokje meteen te laten vallen.
+        </div>
+    </div>
+</body>

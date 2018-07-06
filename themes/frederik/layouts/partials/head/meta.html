@@ -3,16 +3,32 @@
 <meta name="auhtor" content="Frederik Creemers" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+{{- define "imageHelper" -}}
+    {{- if (hasPrefix .image "/") -}}
+        {{absURL .image}}
+    {{- else if hasPrefix .image "." -}}
+        {{absURL (print .path .image)}}
+    {{- else if and (not (hasPrefix .image "https://")) (not (hasPrefix .image "http://")) -}}
+        {{absURL (print .path .image)}}
+    {{- else -}}
+        {{.image}}
+    {{- end -}}
+{{end -}}
+
+{{- define "image" -}}
+    {{if .dot.Params.image -}}        
+        <meta name="{{.name}}" content="{{template "imageHelper" (dict "image" .dot.Params.image "path" .dot.Permalink)}}" />
+    {{- else -}}
+        <meta name="{{.name}}" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+    {{- end}}
+{{- end}}
+
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@_bigblind">
 <meta name="twitter:title" content="{{.Title}}">
 <meta name="twitter:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-{{if .Params.Image}}
-<meta name="twitter:image" content="{{.Params.Image}}" />
-{{else}}
-<meta name="twitter:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
-{{end}}
+{{template "image" (dict "dot" . "name" "twitter:image")}}
 {{.Hugo.Generator}}
 
 
