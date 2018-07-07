@@ -1,5 +1,6 @@
 ---
 title: "Lay Out Your Code Like You'd Lay Out Your House"
+description: "Laying out your code base optimally can have a big impact on how easy it is to understand and maintain."
 date: 2018-07-06T20:28:28+02:00
 draft: false
 image: "floorplan.jpg"
