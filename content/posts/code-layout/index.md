@@ -6,7 +6,7 @@ draft: false
 image: "floorplan.jpg"
 ---
 
-Imagine you wake up and get up to brush your teeth. You go to the "brooms and brushes" room to get your tooth brush. Then, you go to the "cleaning products" room to get toothpaste. You continue to the "containers" room to get a cup, and finally, you head into the "inputs and outputs" room, where you have a tap through which water enters your house, and a sink with a drain through which fluids can leave your house. You now have everything to go brush your teeth.
+Imagine you wake up and get up to brush your teeth. You go to the "brooms and brushes" room to get your toothbrush. Then, you go to the "cleaning products" room to get toothpaste. You continue to the "containers" room to get a cup, and finally, you head into the "inputs and outputs" room, where you have a tap that lets water enter your house, and a sink with a drain through which fluids can leave your house. You now have everything to go brush your teeth.
 
 I won't bore you by describing the rest of your day in this very strange house in detail, but you can imagine getting a knife to spread some peanut butter on your bread from the "cutters" room, where you also keep your razors and garden shears. It'd obviously be incredibly inconvenient of your house were laid out that way. And yet, we often structure our code bases this way.
 
@@ -99,7 +99,7 @@ class PostController(BaseController):
 
 ````
 
-This code might look reasonable, but now imagine you are asked to add a "banner_image" field to posts to make them more visually interesting. This required changes in:
+This code might look reasonable, but there's a problem when things change. For example, the file above imports functions from manny other modules. If any of these modules changes their public interface, this file needs to be updated. But since the file is not located near the change, you need to search through the entire code base to see where the changed function is called in order to update the calls. For a more concrete example, imagine you are asked to add a "banner_image" field to posts to make them more visually interesting. This required changes in:
 
   - `storage/posts.py` to add the field to the database.
   - `controllers/posts.py` to handle the uploaded image.
@@ -110,11 +110,11 @@ While this isn't too bad in a code base of this size, as your code base grows, i
 
 ## Let's Fix This!
 
-![](refactor.png)
+![](https://frederikcreemers.be/posts/code-layout/refactor.png)
 
 Let's group all posts-related functionality together, all users-related functionality together, etc...
 
-```
+````
 BogoBlog/
 ├── main.py
 ├── posts/
@@ -132,9 +132,29 @@ BogoBlog/
     ├── controllers.py
     ├── storage.py
     └── validators.py
-```
+````
 
 So now, when we need to change something related to posts, you'll likely just have to edit files in `/posts`, and the same goes for other pieces of functionality. Of course, you may still need to edit code in multiple directories, but at least now you're thinking in terms of which **features** of the app a change affects.
+
+## Cohesion
+
+When talking about what belongs together in a software project, the word **Cohesion** is often used. As we all know, Wikipedia is the source of all truth on the internet, so let's see [what Wikipedia has to say about cohesion](https://en.wikipedia.org/wiki/Cohesion_(computer_science)).
+
+> In [computer programming](https://en.wikipedia.org/wiki/Computer_programming), **cohesion** refers to the degree to which the elements inside a [module](https://en.wikipedia.org/wiki/Module_(programming)) belong together.[[1]](https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-FOOTNOTEYourdonConstantine1979-1) In one sense, it is a measure of the strength of relationship between the methods and data of a class and some unifying purpose or concept served by that class. In another sense, it is a measure of the strength of relationship between the class’s methods and data themselves.
+
+Ok, so **cohesion** just means "how much parts of a program belong together". The definition of the term doesn't say anything about how it should be measured, but it is often used without further defining it. People just say you should have "high cohesion".
+
+Later in the same article, there's [a list of different types of cohesion, defined by how they are measured](https://en.wikipedia.org/wiki/Cohesion_(computer_science)#Types_of_cohesion).
+
+>  - **Functional cohesion** is when parts of a module are grouped because they all contribute to a single well-defined task of the module (e.g. Lexical analysis of an XML string).
+>
+> [...]
+>
+> Studies by various people including [Larry Constantine](https://en.wikipedia.org/wiki/Larry_Constantine), [Edward Yourdon](https://en.wikipedia.org/wiki/Edward_Yourdon), and [Steve McConnell](https://en.wikipedia.org/wiki/Steve_McConnell) [[3]](https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-3) indicate that [...] and functional cohesion is superior.
+
+Functional cohesion sounds a lot like what we just did, right? Grouping things by what functionality they contribute to. So when talking about cohesion, please be specific about what type of cohesion you mean.
+
+I removed a lot of content from this citation because I didn't feel like citing a whole section from Wikipedia and then re-explaining it. I might spend some more time looking into this, and writing another article about cohesion, because I think this Wikipedia article puts too much emphasis on object-oriented programming, and I'd love to take a look at what cohesion means at diferent levels of granularity and in different programming paradigms.
 
 ## Other Considerations.
 
