@@ -6,3 +6,5 @@ theme = "frederik"
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsOptions="linenos=true"
+
+enableGitInfo = true
