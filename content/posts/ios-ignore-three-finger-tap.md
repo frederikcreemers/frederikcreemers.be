@@ -1,5 +1,5 @@
 ---
-title: "Ios Ignore Three Finger Tap"
+title: "Dear IOS developers, Please Ignore 3-Finger Taps"
 date: 2019-02-19T15:17:11+01:00
 draft: false
 ---
