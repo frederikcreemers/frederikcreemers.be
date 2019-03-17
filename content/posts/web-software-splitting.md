@@ -3,6 +3,7 @@ title: Is The Web Forcing Us to Split Applications the Wrong Way?
 date: 2019-01-30T15:42:36+01:00
 description: Could the way we architect web applications be making them harder to modify?
 cover_image: https://thepracticaldev.s3.amazonaws.com/i/8it1bawekbzfvy6uvj8l.jpg
+draft: false
 ---
 
 In November of last year, I attended a meetup in Utrecht for the [global day of coderetreat](https://www.coderetreat.org/). During the lunch break, there was a talk by [Joost Baas](https://www.linkedin.com/in/joost-baas-667b3814/?originalSubdomain=nl) from [bol.com](https://bol.com), a large Dutch eCommerce company.
