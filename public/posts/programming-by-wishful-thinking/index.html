@@ -11,10 +11,7 @@
 <meta name="twitter:creator" content="@_bigblind">
 <meta name="twitter:title" content="Programming by Wishful Thinking">
 <meta name="twitter:description" content="" />
-
-<meta name="twitter:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
-
-<meta name="generator" content="Hugo 0.42.2" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 
@@ -26,14 +23,12 @@
 <meta property="og:article:author:first_name" content="Frederik" />
 <meta property="og:article:author:last_name" content="Creemers" />
 <meta property="og:article:published_time" content="2017-10-06 15:35:38 &#43;0200 CEST">
-
-<meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200" />
-
+<meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
 
 
-    <link href="https://www.frederikcreemers.be/css/style.css" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1561490604" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="icon" href="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=16" />
+<link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
 <link rel="webmention" href="https://webmention.io/www.frederikcreemers.be/webmention" />
     
@@ -72,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </head>
 </head>
 <body>
-    <div id="wrapper">
     <header class="mobile-only" id="mobile-header">
       <button id="open-nav" class="mobile-only">
           <i class="fa fa-bars" aria-label="Open menu"></i>
@@ -141,12 +135,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>So here&rsquo;s how you&rsquo;d write that function in JavaScript:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">6
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getWinner</span>(<span style="color:#a6e22e">board</span>) {
@@ -162,16 +155,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>Let&rsquo;s dig in and write <code>getHorizontalWinner</code> first</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">10
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getHorizontalWinner</span>(<span style="color:#a6e22e">board</span>) {
@@ -191,16 +183,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p><code>getVerticalWinner</code> will look very similar:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">10
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getVerticalWinner</span>(<span style="color:#a6e22e">board</span>) {
@@ -220,11 +211,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>Now for <code>getDiagonalWinner</code>:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">5
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDiagonalWinner</span>(<span style="color:#a6e22e">board</span>) {
@@ -237,13 +227,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>Pretty simple, right? Now the only thing we have left to write is <code>getLineWinner</code>:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">7
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getLineWinner</span>(<span style="color:#a6e22e">line</span>) {
@@ -270,5 +259,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
          &copy; 2017 Frederik Creemers
          
     </section>
-    </div>
 </body>

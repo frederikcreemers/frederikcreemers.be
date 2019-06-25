@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About Me. on Frederik Creemers</title>
@@ -8,7 +7,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Apr 2018 17:25:55 +0200</lastBuildDate>
     
-	<atom:link href="https://www.frederikcreemers.be/about/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.frederikcreemers.be/about/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

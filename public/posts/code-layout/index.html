@@ -2,7 +2,7 @@
     <head>
     <title>Lay Out Your Code Like You&#39;d Lay Out Your House -- Frederik Creemers</title>
     <meta charset="utf-8">
-<meta name="description" content="" />
+<meta name="description" content="Laying out your code base optimally can have a big impact on how easy it is to understand and maintain." />
 <meta name="auhtor" content="Frederik Creemers" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,30 +10,25 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@_bigblind">
 <meta name="twitter:title" content="Lay Out Your Code Like You&#39;d Lay Out Your House">
-<meta name="twitter:description" content="" />
-
-<meta name="twitter:image" content="/floorplan.jpg" />
-
-<meta name="generator" content="Hugo 0.42.2" />
+<meta name="twitter:description" content="Laying out your code base optimally can have a big impact on how easy it is to understand and maintain." />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Lay Out Your Code Like You&#39;d Lay Out Your House" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Laying out your code base optimally can have a big impact on how easy it is to understand and maintain." />
 <meta property="og:site_name" content="Frederik Creemers">
 <meta property="og:url" content="https://www.frederikcreemers.be/posts/code-layout/" />
 <meta property="og:article:author:first_name" content="Frederik" />
 <meta property="og:article:author:last_name" content="Creemers" />
 <meta property="og:article:published_time" content="2018-07-06 20:28:28 &#43;0200 CEST">
-
-<meta property="og:image" content="/floorplan.jpg" />
-
+<meta name="og:image" content="https://www.frederikcreemers.be/posts/code-layout/floorplan.jpg" />
 
 
-    <link href="https://www.frederikcreemers.be/css/style.css" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1561490604" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="icon" href="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=16" />
+<link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
 <link rel="webmention" href="https://webmention.io/www.frederikcreemers.be/webmention" />
     
@@ -72,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </head>
 </head>
 <body>
-    <div id="wrapper">
     <header class="mobile-only" id="mobile-header">
       <button id="open-nav" class="mobile-only">
           <i class="fa fa-bars" aria-label="Open menu"></i>
@@ -122,7 +116,272 @@ document.addEventListener("DOMContentLoaded", function(event) {
     <h1><a href="/posts/code-layout/">Lay Out Your Code Like You&#39;d Lay Out Your House</a></h1>
     <span class="postdate"><i class="fa fa-calendar" aria-hidden></i> July 6, 2018</span>
     <hr />
-    <p>Let&rsquo;s try this.</p>
+    
+
+<p>Imagine you wake up and get up to brush your teeth. You go to the &ldquo;brooms and brushes&rdquo; room to get your toothbrush. Then, you go to the &ldquo;cleaning products&rdquo; room to get toothpaste. You continue to the &ldquo;containers&rdquo; room to get a cup, and finally, you head into the &ldquo;inputs and outputs&rdquo; room, where you have a tap that lets water enter your house, and a sink with a drain through which fluids can leave your house. You now have everything to go brush your teeth.</p>
+
+<p>I won&rsquo;t bore you by describing the rest of your day in this very strange house in detail, but you can imagine getting a knife to spread some peanut butter on your bread from the &ldquo;cutters&rdquo; room, where you also keep your razors and garden shears. It&rsquo;d obviously be incredibly inconvenient of your house were laid out that way. And yet, we often structure our code bases this way.</p>
+
+<h2 id="why-is-this-so-inconvenient">Why Is This So Inconvenient?</h2>
+
+<p>In the example above, you had to visit 4 different rooms just to brush your teeth. This is ridiculous! You&rsquo;d expect everything you need to brush your teeth to be conveniently located together.</p>
+
+<p>So let&rsquo;s have a look at an example code base for a hypothetical blogging application. Since it&rsquo;s a hypothetical code base, I&rsquo;m not using any specific web/database/&hellip; framework here.
+The code will be written in Python, but you don&rsquo;t need to know Python to get the point of this post.</p>
+
+<p>The structure of the app might look like this:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">BogoBlog/
+├── main.py
+├── controllers/
+│   ├── posts.py
+│   ├── comments.py
+│   └── users.py
+├── errors/
+│   ├── posts.py
+│   ├── comments.py
+│   └── users.py
+├── storage/
+│   ├── posts.py
+│   ├── comments.py
+│   └── users.py
+├── templates/
+│   ├── posts/
+│   │   ├── post.html
+│   │   └── ... more files ...
+│   ├── comments/ ...more files inside ...
+│   └── users/ ...more files inside ...
+└── validators/
+    ├── posts.py
+    ├── comments.py
+    └── users.py</pre></td></tr></table>
+</div>
+</div>
+<p>This looks like an <strong>MVC</strong> application. Let&rsquo;s take a look at the <code>controllers/posts.py</code> file:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> cool_web_framework <span style="color:#f92672">import</span> BaseController, HttpForbiddenError, HttpNotFoundError,
+<span style="color:#f92672">from</span> storage.posts <span style="color:#f92672">import</span> PostsStore
+<span style="color:#f92672">from</span> storage.users <span style="color:#f92672">import</span> UsersStore
+<span style="color:#f92672">from</span> errors.posts <span style="color:#f92672">import</span> PostNotFoundError
+<span style="color:#f92672">from</span> errors.users <span style="color:#f92672">import</span> UserNotFoundError
+<span style="color:#f92672">from</span> validators.posts <span style="color:#f92672">import</span> validate_post
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PostController</span>(BaseController):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, postId):
+        <span style="color:#e6db74">&#34;&#34;&#34;Handle GET requests to /posts/{postId}&#34;&#34;&#34;</span>
+            post <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fetch_post(postId)
+        
+        <span style="color:#66d9ef">if</span> post<span style="color:#f92672">.</span>is_draft:
+            self<span style="color:#f92672">.</span>ensure_current_user_can_edit(post)
+        
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>render_template(<span style="color:#e6db74">&#34;templates/post.html&#34;</span>, post)
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">post</span>(self, postId):
+        <span style="color:#e6db74">&#34;&#34;&#34;Handle POST requests to /posts/{postId}&#34;&#34;&#34;</span>
+        post <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fetch_post(postId)
+        
+        self<span style="color:#f92672">.</span>ensure_current_user_can_edit(post)
+        
+        data <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>body<span style="color:#f92672">.</span>json()
+        err <span style="color:#f92672">=</span> validate_post(data)
+        <span style="color:#66d9ef">if</span> err:
+            <span style="color:#66d9ef">raise</span> HttpBadRequestError(err)
+        
+        post<span style="color:#f92672">.</span>update(data)
+        PostsStore<span style="color:#f92672">.</span>save(post)
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>redirect(<span style="color:#e6db74">&#34;/&#34;</span>)
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_post</span>(self, postId):
+        <span style="color:#66d9ef">try</span>: 
+            <span style="color:#66d9ef">return</span> PostsStore<span style="color:#f92672">.</span>get_post_by_id(postId)
+        <span style="color:#66d9ef">except</span> PostNotFoundError:
+            <span style="color:#66d9ef">raise</span> HttpNotFoundError(<span style="color:#e6db74">&#34;No post with id &#34;</span> <span style="color:#f92672">+</span> postId)
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ensure_current_user_can_edit</span>(self):
+        err <span style="color:#f92672">=</span> HttpForbiddenError(<span style="color:#e6db74">&#34;You don&#39;t have permission to view this post.&#34;</span>)
+        <span style="color:#66d9ef">try</span>:
+            <span style="color:#66d9ef">return</span> UsersStore<span style="color:#f92672">.</span>get_current_user(self<span style="color:#f92672">.</span>request)
+        <span style="color:#66d9ef">except</span> UserNotFoundError:
+            <span style="color:#66d9ef">raise</span> err
+        
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (user<span style="color:#f92672">.</span>is_admin <span style="color:#f92672">or</span> post<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> user):
+            <span style="color:#66d9ef">raise</span> err</code></pre></td></tr></table>
+</div>
+</div>
+<p>This code might look reasonable, but there&rsquo;s a problem when things change. For example, the file above imports functions from manny other modules. If any of these modules changes their public interface, this file needs to be updated. But since the file is not located near the change, you need to search through the entire code base to see where the changed function is called in order to update the calls. For a more concrete example, imagine you are asked to add a &ldquo;banner_image&rdquo; field to posts to make them more visually interesting. This required changes in:</p>
+
+<ul>
+<li><code>storage/posts.py</code> to add the field to the database.</li>
+<li><code>controllers/posts.py</code> to handle the uploaded image.</li>
+<li><code>validators/posts.py</code> to validate the image, make sure it&rsquo;s of a supported file type, size, etc.</li>
+<li><code>templates/posts/post.html</code> to display the image.
+<br /></li>
+</ul>
+
+<p>While this isn&rsquo;t too bad in a code base of this size, as your code base grows, it becomes harder to track down where things need to be changed. Having to jump around this much also makes the code base harder to understan. The reason we&rsquo;re editing files all over the place to add a feature is because we&rsquo;ve grouped files by what type of code they hold in terms of te <strong>MVC</strong> pattern, rather than grouping them by <strong>what functionality they provide</strong>.</p>
+
+<h2 id="let-s-fix-this">Let&rsquo;s Fix This!</h2>
+
+<p><img src="https://frederikcreemers.be/posts/code-layout/refactor.png" alt="" /></p>
+
+<p>Let&rsquo;s group all posts-related functionality together, all users-related functionality together, etc&hellip;</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">BogoBlog/
+├── main.py
+├── posts/
+│   ├── controllers.py
+│   ├── storage.py
+│   ├── validators.py
+│   └── templates/
+│       ├── post.html
+│       └── ... more files ...
+├── comments/
+│   ├── controllers.py
+│   ├── storage.py
+│   └── validators.py
+└── users/
+    ├── controllers.py
+    ├── storage.py
+    └── validators.py</pre></td></tr></table>
+</div>
+</div>
+<p>So now, when we need to change something related to posts, you&rsquo;ll likely just have to edit files in <code>/posts</code>, and the same goes for other pieces of functionality. Of course, you may still need to edit code in multiple directories, but at least now you&rsquo;re thinking in terms of which <strong>features</strong> of the app a change affects.</p>
+
+<h2 id="cohesion">Cohesion</h2>
+
+<p>When talking about what belongs together in a software project, the word <strong>Cohesion</strong> is often used. As we all know, Wikipedia is the source of all truth on the internet, so let&rsquo;s see <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)">what Wikipedia has to say about cohesion</a>.</p>
+
+<blockquote>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_programming">computer programming</a>, <strong>cohesion</strong> refers to the degree to which the elements inside a <a href="https://en.wikipedia.org/wiki/Module_(programming)">module</a> belong together.<a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-FOOTNOTEYourdonConstantine1979-1">[1]</a> In one sense, it is a measure of the strength of relationship between the methods and data of a class and some unifying purpose or concept served by that class. In another sense, it is a measure of the strength of relationship between the class’s methods and data themselves.</p>
+</blockquote>
+
+<p>Ok, so <strong>cohesion</strong> just means &ldquo;how much parts of a program belong together&rdquo;. The definition of the term doesn&rsquo;t say anything about how it should be measured, but it is often used without further defining it. People just say you should have &ldquo;high cohesion&rdquo;.</p>
+
+<p>Later in the same article, there&rsquo;s <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#Types_of_cohesion">a list of different types of cohesion, defined by how they are measured</a>.</p>
+
+<blockquote>
+<ul>
+<li><strong>Functional cohesion</strong> is when parts of a module are grouped because they all contribute to a single well-defined task of the module (e.g. Lexical analysis of an XML string).</li>
+</ul>
+
+<p>[&hellip;]</p>
+
+<p>Studies by various people including <a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>, <a href="https://en.wikipedia.org/wiki/Edward_Yourdon">Edward Yourdon</a>, and <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a> <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-3">[3]</a> indicate that [&hellip;] and functional cohesion is superior.</p>
+</blockquote>
+
+<p>Functional cohesion sounds a lot like what we just did, right? Grouping things by what functionality they contribute to. So when talking about cohesion, please be specific about what type of cohesion you mean.</p>
+
+<p>I removed a lot of content from this citation because I didn&rsquo;t feel like citing a whole section from Wikipedia and then re-explaining it. I might spend some more time looking into this, and writing another article about cohesion, because I think this Wikipedia article puts too much emphasis on object-oriented programming, and I&rsquo;d love to take a look at what cohesion means at diferent levels of granularity and in different programming paradigms.</p>
+
+<h2 id="other-considerations">Other Considerations.</h2>
+
+<ul>
+<li><strong>It&rsquo;s not just MVC</strong>. I&rsquo;ve used an MVC app here, because it&rsquo;s a pattern a lot of people are familiar with, but the same problem occurs in other cases, like when you split a React+Redux app into components, actions, reducers, &hellip; etc.</li>
+<li><strong>Conventions are important</strong>. You can be much more productive if everyone understands the structure of the code base. If there&rsquo;s a code base structure that the community, your company or your team sticks to, don&rsquo;t just suddenly change everything. If you&rsquo;d like to change the conventions, start a conversation around it. Changing a convention might also require tooling changes, like CLI tools that scaffold the project structure.</li>
+<li><strong>Build frameworks that support this</strong>. If you&rsquo;re the author of a framework, try to design it soo users can structure their code base this way. Django does this quite nicely by splitting projects into &ldquo;apps&rdquo; that hold different features for the project. (yes the name app is a bit confusing there, since you&rsquo;d consider the entire project an app, but you get used to that.)</li>
+<li><strong>Don&rsquo;t nest too deeply</strong>. Directories make it easier to find things, but they have the disadvantage that you need to remember where files are. Most places that display a list of files can do so in alphabetical order based on the file name. And it&rsquo;s quite easy to find a file in a sorted list, whereas it requires much more mental cycles to remember a deeply nested structure of files and folders.</li>
+</ul>
+
+<h2 id="thanks-for-reading">Thanks for reading!</h2>
+
+<p>Please let me know what you think <a href="https://twitter.com/_bigblind">on Twitter</a></p>
 
 
       </article>
@@ -133,5 +392,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
          &copy; 2017 Frederik Creemers
          
     </section>
-    </div>
 </body>
