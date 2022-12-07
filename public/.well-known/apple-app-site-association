@@ -1,11 +1,11 @@
-{
-    "applinks": {
-        "apps": [],
-        "details": [{
-            "appIDs": ["X4N6SX7PT5.be.frederikcreemers.Mast"],
-            "components": {
-                "/" "/mast/authenticate/*"
-            }
-        }]
+    {
+        "applinks": {
+            "apps": [],
+            "details": [{
+                "appIDs": ["X4N6SX7PT5.be.frederikcreemers.Mast"],
+                "components": {
+                    "/" "/mast/authenticate/*"
+                }
+            }]
+        }
     }
-}
