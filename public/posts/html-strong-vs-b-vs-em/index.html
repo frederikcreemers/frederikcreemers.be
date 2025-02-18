@@ -1,0 +1,197 @@
+<head>
+    <head>
+    <title>Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them. -- Frederik Creemers</title>
+    <meta charset="utf-8">
+<meta name="description" content="" />
+<meta name="auhtor" content="Frederik Creemers" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@_bigblind">
+<meta name="twitter:title" content="Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them.">
+<meta name="twitter:description" content="" />
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them." />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content="Frederik Creemers">
+<meta property="og:url" content="https://www.frederikcreemers.be/posts/html-strong-vs-b-vs-em/" />
+<meta property="og:article:author:first_name" content="Frederik" />
+<meta property="og:article:author:last_name" content="Creemers" />
+<meta property="og:article:published_time" content="2024-04-22 22:27:16 &#43;0200 CEST">
+<meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+
+
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1739839506" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
+<link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/www.frederikcreemers.be/webmention" />
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29151209-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-29151209-2');
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var btn = document.getElementById("open-nav");
+    var btn2 = document.getElementById("close-nav");
+    var main = document.getElementById("main");
+    var nav = document.getElementById("nav");
+    var toggleNav = function(){
+      nav.classList.toggle("open");
+      console.log("toggle");
+    }
+    main.addEventListener("click", function(e){
+      console.log(e.target)
+      window.bbb = e.target;
+      if(! (e.target.id === "open-nav" || e.target.parentElement.id === "open-nav")){
+        nav.classList.remove("open");
+      }
+    })
+
+    btn.addEventListener("click", toggleNav);
+    btn2.addEventListener("click", toggleNav);
+});
+</script>
+</head>
+</head>
+<body>
+    <header class="mobile-only" id="mobile-header">
+      <button id="open-nav" class="mobile-only">
+          <i class="fa fa-bars" aria-label="Open menu"></i>
+      </button>
+      <span class="site-title">Frederik Creemers</span>
+    </header>
+    <nav id="nav">
+      <button class="fr mobile-only" id="close-nav">
+        <i class="fa fa-times" aria-label="Close menu"></i>
+      </button>
+      <a class="site-title h-card u-url u-uid" href="http://www.frederikcreemers.be">
+        <span class="p-name">Frederik Creemers</span>
+        <img class="round u-photo" src="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
+      </a>
+      <ul id="menu">
+        <li>
+          <a href="/">
+            Blog<i class="fa fa-rss"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            About<i class="fa fa-user"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/bigblind" rel="me">
+            Github<i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/_bigblind" rel="me">
+            Twitter<i class="fa fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section id="main">
+      
+      
+        <h1 class="page-title">
+              posts
+        </h1>
+      
+      <article>
+      
+<div class="h-entry">
+    <h1 class="p-title"><a href="/posts/html-strong-vs-b-vs-em/">Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them.</a></h1>
+    <span class="postdate">
+        <i class="fa fa-calendar" aria-hidden></i>
+        <time class="dt-published" datetime="2024-422-22 422:100">April 22, 2024</time>
+    </span>
+    <hr />
+    <div class="e-content"><p>The HTML elements <code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code>, and <code>&lt;em&gt;</code> seem to serve a very similar function: to emphasize, or draw attention to, a particular part of the content.</p>
+<p>I didn&rsquo;t like any of the top search results when googling this, because all I wanted was a quick summary of what the spec has to say on this. So, I made one.</p>
+<h2 id="the-pre-element">The <code>pre</code> element</h2>
+<p>From <a href="https://html.spec.whatwg.org/#the-em-element">The relevant section in the HTML spec</a></p>
+<blockquote>
+<p>The em element represents stress emphasis of its contents.</p>
+<p>The level of stress that a particular piece of content has is given by its number of ancestor em elements.</p>
+<p>The placement of stress emphasis changes the meaning of the sentence. The element thus forms an integral part of the content. The precise way in which stress is used in this way depends on the language.</p></blockquote>
+<p>To illustrate this use, they repeat the same statement about cats, with em tags around various parts of the sentence:</p>
+<blockquote>
+<p><code>&lt;p&gt;&lt;em&gt;Cats&lt;/em&gt; are cute animals.&lt;/p&gt;</code></p>
+<p>Moving the stress to the verb, one highlights that the truth of the entire sentence is in question (maybe someone is saying cats are not cute):</p>
+<p><code>&lt;p&gt;Cats &lt;em&gt;are&lt;/em&gt; cute animals.&lt;/p&gt;</code></p>
+<p>By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone suggested cats were mean animals):</p></blockquote>
+<p>[&hellip;]</p>
+<blockquote>
+<p>Anger mixed with emphasizing the cuteness could lead to markup such as:</p>
+<p><code>&lt;p&gt;&lt;em&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals!&lt;/em&gt;&lt;/p&gt;</code></p></blockquote>
+<h2 id="the-strong-element">The <code>strong</code> element</h2>
+<p><a href="https://html.spec.whatwg.org/#the-em-element">According to the spec</a>:</p>
+<blockquote>
+<p>The strong element represents strong importance, seriousness, or urgency for its contents.</p></blockquote>
+<p>The spec has some examples for each of these cases</p>
+<blockquote>
+<p>Here, the word &ldquo;chapter&rdquo; and the actual chapter number are mere boilerplate, and the actual name of the chapter is marked up with strong:</p>
+<p><code>&lt;h1&gt;Chapter 1: &lt;strong&gt;The Praxis&lt;/strong&gt;&lt;/h1&gt;</code></p></blockquote>
+<blockquote>
+<p>Here is an example of a warning notice in a game, with the various parts marked up according to how important they are:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;strong&gt;Avoid the ducks.&lt;/strong&gt; Take any gold you find.
+</span></span><span style="display:flex;"><span>&lt;strong&gt;&lt;strong&gt;Do not take any of the diamonds&lt;/strong&gt;,
+</span></span><span style="display:flex;"><span>they are explosive and &lt;strong&gt;will destroy anything within
+</span></span><span style="display:flex;"><span>ten meters.&lt;/strong&gt;&lt;/strong&gt; You have been warned.&lt;/p&gt;```
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<blockquote>
+<p>n this example, the strong element is used to denote the part of the text that the user is intended to read first.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;p&gt;Your tasks for today:&lt;/p&gt;
+</span></span><span style="display:flex;"><span>&lt;ul&gt;
+</span></span><span style="display:flex;"><span> &lt;li&gt;&lt;p&gt;&lt;strong&gt;Turn off the oven.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span> &lt;li&gt;&lt;p&gt;Put out the trash.&lt;/p&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span> &lt;li&gt;&lt;p&gt;Do the laundry.&lt;/p&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>&lt;/ul&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="the-b-element">The <code>b</code> element</h2>
+</div>
+</div>
+
+      </article>
+      
+    </section>
+    <section id="footer">
+        
+         &copy; 2017 Frederik Creemers
+         
+    </section>
+</body>

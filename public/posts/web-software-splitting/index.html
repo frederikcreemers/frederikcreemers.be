@@ -11,8 +11,6 @@
 <meta name="twitter:creator" content="@_bigblind">
 <meta name="twitter:title" content="Is The Web Forcing Us to Split Applications the Wrong Way?">
 <meta name="twitter:description" content="Could the way we architect web applications be making them harder to modify?" />
-<meta name="generator" content="Hugo 0.55.6" />
-
 
 
 <meta property="og:type" content="article" />
@@ -26,7 +24,7 @@
 <meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
 
 
-    <link href="https://www.frederikcreemers.be/css/style.css?h=1564522623" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1739839506" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
@@ -120,32 +118,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <time class="dt-published" datetime="2019-130-30 130:30">January 30, 2019</time>
     </span>
     <hr />
-    <div class="e-content">
-
-<p>In November of last year, I attended a meetup in Utrecht for the <a href="https://www.coderetreat.org/">global day of coderetreat</a>. During the lunch break, there was a talk by <a href="https://www.linkedin.com/in/joost-baas-667b3814/?originalSubdomain=nl">Joost Baas</a> from <a href="https://bol.com">bol.com</a>, a large Dutch eCommerce company.</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/vz91sltukl1lczrhoib9.jpg" alt=" " /></p>
-
+    <div class="e-content"><p>In November of last year, I attended a meetup in Utrecht for the <a href="https://www.coderetreat.org/">global day of coderetreat</a>. During the lunch break, there was a talk by <a href="https://www.linkedin.com/in/joost-baas-667b3814/?originalSubdomain=nl">Joost Baas</a> from <a href="https://bol.com">bol.com</a>, a large Dutch eCommerce company.</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/vz91sltukl1lczrhoib9.jpg" alt=" "></p>
 <p>In the talk, Joost discussed a change they were making to how order statuses work. They integrated with the delivery firms to provide the shipping status within the bol.com interface. They added some new possible states an order could be in. This change rippled through different teams; from the backend where the new state was introduced (possibly even multiple microservices within the backend), to the web and mobile frontend which had to handle the new state to display it in a user-friendly way. Each of these had to add a new check for these values.</p>
-
 <p>They started to wonder if they could avoid rippling effects from changes like this in the future. So what they ended up doing was making the API provide the status label, description and any other info that the frontend would need to display. The UI would then provide places where these values would be displayed.</p>
-
 <h1 id="coherence-and-decoupling">Coherence and Decoupling</h1>
-
 <p>The talk reminded me about a <a href="https://www.frederikcreemers.be/posts/code-layout/">blog post on code layout</a> I wrote earlier last year. The post argues for grouping code by application domain (users, blog posts, permissions, &hellip;), rather than architectural component (models, views, controllers, repositories, &hellip;). Code dealing with a certain part of the problem domain is often necessarily coupled together. There are lots of definitions for coherence out there, but I think of application parts being coherent if they have an inherent reason to change together. So grouping coherent code together often confines changes to a specific part of the code base.</p>
-
 <h1 id="the-chasm-between-the-client-and-the-server">The Chasm Between the Client and the Server</h1>
-
 <p>In applications with a client-server architecture (of which web applications are probably the most common), by definition, the code runs in 2 separate areas, the client and the server.</p>
-
 <p>But wait&hellip;, client and server are <strong>architectural</strong> components, with components belonging to the same domain area, split between the 2 sections of code. Worse yet, these are often completely separate repositories, written in different programming languages, managed by different teams! This leads to a situation where cascading changes are quite common, but hard to coordinate.</p>
-
 <h1 id="solutions">Solutions?</h1>
-
 <p>This is not one of those blog posts where I have a magical solution in the conclusion. I have a few guesses for what might work, and <strong>I&rsquo;d love to hear from you</strong> about your experiences.</p>
-
 <p>If all the parts of your application are written in the same language, you can share a lot of data structures and logic between the client and server, isolating the code that is tailored to a specific platform.</p>
-
 <p>Have you tried splitting your code by domain area rather than client/server? (How) did that work?</p>
 </div>
 </div>

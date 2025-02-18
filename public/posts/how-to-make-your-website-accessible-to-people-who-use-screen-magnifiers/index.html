@@ -11,8 +11,6 @@
 <meta name="twitter:creator" content="@_bigblind">
 <meta name="twitter:title" content="How to Make Your Website Accessible to People Who Use Screen Magnifiers">
 <meta name="twitter:description" content="There&#39;s a lot of content out there on how to make your website accessible. But I haven&#39;t seen much on the subject of accessibility to users of screen magnifiers. I&#39;m one of them, and I frequently run into annoying issues on the web." />
-<meta name="generator" content="Hugo 0.55.6" />
-
 
 
 <meta property="og:type" content="article" />
@@ -26,7 +24,7 @@
 <meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
 
 
-    <link href="https://www.frederikcreemers.be/css/style.css?h=1564522623" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1739839506" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
@@ -120,82 +118,45 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <time class="dt-published" datetime="2017-67-07 67:50">June 7, 2017</time>
     </span>
     <hr />
-    <div class="e-content">
-
-<p>There&rsquo;s a lot of content out there on how to make your website accessible. But I haven&rsquo;t seen much on the subject of accessibility to users of screen magnifiers. I&rsquo;m one of them, and I frequently run into annoying issues on the web.</p>
-
+    <div class="e-content"><p>There&rsquo;s a lot of content out there on how to make your website accessible. But I haven&rsquo;t seen much on the subject of accessibility to users of screen magnifiers. I&rsquo;m one of them, and I frequently run into annoying issues on the web.</p>
 <p>In this article, I&rsquo;ll give some tips on how you can make your website more accessible to users of screen magnifying software.</p>
-
 <p><strong>Disclaimers:</strong></p>
-
 <ul>
 <li>This article is purely based on years of using the web with a screen magnifier. I have conducted no user research (I&rsquo;d love to see the results of such studies though).</li>
 <li>I&rsquo;m only going to discuss my experiences on the desktop, not mobile. While I do occasionally use the screen magnifier built into IOS, a mobile screen is so small that there&rsquo;s so little content on the screen when magnified to the desired level for me, that I usually prefer to use VoiceOver.</li>
 <li>Whereas making websites more accessible to screen readers is <strong>always a win</strong> since it doesn&rsquo;t alter the visual appearance of the site, making it accessible to users of magnifiers might be a balancing act. I&rsquo;m not a designer, and so I might be arguing for things in this article that would improve the experience for the people using magnifiers, but would be worse for the 99% of your visitors who are fully-sighted. In such cases, please leave a comment, I&rsquo;d love to know about these.</li>
 </ul>
-
-<h1 id="what-s-a-screen-magnifier">What&rsquo;s a screen magnifier</h1>
-
+<h1 id="whats-a-screen-magnifier">What&rsquo;s a screen magnifier</h1>
 <p>A screen magnifier is a piece of software that magnifies the screen (how unexpected!) It displays a portion of what would be on the screen, enlarged, either on the full screen, or on a region of the screen, leaving the rest unmagnified.</p>
-
 <p>As an example, here&rsquo;s what it looks like for me to browse the articles on the home page of <a href="https://dev.to">dev.to</a>:</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/oqoasmqwnnvep9ci2wri.gif" alt="" /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/oqoasmqwnnvep9ci2wri.gif" alt=""></p>
 <h1 id="moving-the-magnifier-around-the-screen">Moving the magnifier around the screen</h1>
-
 <p>Because the screen is being magnified, obviously not all of it will be visible on the display, so you move a sort of virtual rectangular magnifying glass around the screen as you move the mouse. On macOS, there are 3 options for how the movement of the magnifier relates to mouse movement, as illustrated in the following image.</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/ket4231nz0m9ma8kogyf.gif" alt="The illustration shows 3 rectangles representing computer screens. One represents the option to move the screen image &quot;continuously with the pointer&quot;. In this mode, the screen moves as soon as the mouse moves. The position of the mouse on the magnified piece of the screen is proportional to the position of the mouse on the full-sized screen. In the &quot;keep pointer centered&quot; mode, the mouse stays centered as long as it is far away enough from the edge. When near the edge, the magnified image stops moving, so the pointer can move away from the center, towards the edge. In the &quot;only move on edges&quot; mode, the magnified portion of the screen doesn't move until the pointer hits one of the edges of the magnified area." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/ket4231nz0m9ma8kogyf.gif" alt="The illustration shows 3 rectangles representing computer screens. One represents the option to move the screen image &ldquo;continuously with the pointer&rdquo;. In this mode, the screen moves as soon as the mouse moves. The position of the mouse on the magnified piece of the screen is proportional to the position of the mouse on the full-sized screen. In the &ldquo;keep pointer centered&rdquo; mode, the mouse stays centered as long as it is far away enough from the edge. When near the edge, the magnified image stops moving, so the pointer can move away from the center, towards the edge. In the &ldquo;only move on edges&rdquo; mode, the magnified portion of the screen doesn&rsquo;t move until the pointer hits one of the edges of the magnified area."></p>
 <p>I&rsquo;m sorry about the small font size in this gif. The three rectangles represent the full-size unmagnified screen. The moving dot represents the mouse cursor. The screen on the left shows the setting to move the magnified image continuously with the cursor. The one in the middle shows the setting for keeping the cursor near the center, while the one on the right shows the setting for only moving the magnifier when the pointer hits the edge of the magnified area.</p>
-
 <h1 id="1-leave-tooltips-and-other-mouse-triggered-pop-ups-visible-while-the-mouse-is-on-the-displayed-content">1. Leave tooltips and other mouse-triggered pop-ups visible while the mouse is on the displayed content.</h1>
-
 <p>This is the biggest annoyance for me, so I&rsquo;m putting it first. If you only act on one of these, make it this one. Here&rsquo;s an example from the AWS API Gateway Console:</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/jwk2eownwngdmirdqetd.gif" alt="The image shows an animation of an information icon next to a checkbox. When the mouse is moved over the icon, a speech bubble appears next to the icon, with some explanatory text." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/jwk2eownwngdmirdqetd.gif" alt="The image shows an animation of an information icon next to a checkbox. When the mouse is moved over the icon, a speech bubble appears next to the icon, with some explanatory text."></p>
 <p>As you can see the tooltip might not be completely visible when the cursor is hovering over the information icon. I&rsquo;d need to move the mouse to get it in full view, but that hides the tooltip. So I can never completely read the tooltip at the magnification level I want.</p>
-
 <p>The AWS Lambda console shows how this can be done better:</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/joqe6nq1e8l2h2bxup2u.gif" alt="In this image, the animation shows how the tooltip remains visible when the mouse cursor is moved from the information icon to the speech bubble, only disappearing when the cursor leaves the bubble." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/joqe6nq1e8l2h2bxup2u.gif" alt="In this image, the animation shows how the tooltip remains visible when the mouse cursor is moved from the information icon to the speech bubble, only disappearing when the cursor leaves the bubble."></p>
 <p>This is much nicer. I can move my mouse over to the speech bubble in order to read it. Another option would be to toggle the tooltip on click, making it clear to the user that the icon is clickable by making it look more like a button, and changing the cursor into a hand when hovering over it.</p>
-
-<h1 id="2-don-t-obscure-content-when-the-mouse-is-hovering-over-it">2. Don&rsquo;t obscure content when the mouse is hovering over it.</h1>
-
+<h1 id="2-dont-obscure-content-when-the-mouse-is-hovering-over-it">2. Don&rsquo;t obscure content when the mouse is hovering over it.</h1>
 <p>The most annoying recent example I&rsquo;ve seen of this is <a href="https://www.kickstarter.com/projects/theproperpeople/forbidden-explorers-urban-exploration-documentary">Kickstarter&rsquo;s pledge levels</a>.</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif" alt="Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/6ddjy32zofcusj54fy59.gif" alt="Image showing how when you hover over a support level in kickstarter to view the perks you get, the area is covered by a big green overlay."></p>
 <p>I understand that they wanted to make the whole area into a huge &ldquo;call to action&rdquo; button when the mouse cursor is on it, but the overlay makes the underlying list of perks hard to read. A high-contrast border might have been equally visually distinctive, or changing the background of the text, keeping the text visible with good contrast.</p>
-
 <p>Another frequent example of this, is controls covering carousel/slider images or videos on hover. Here&rsquo;s <a href="https://www.tvl.be/programmas/weerbericht-weerbericht-6-juni-45243">an example from TVL</a>, a Belgian provincial television network. They clearly want to indicate that clicking the video will pause it. I think this is such a common interaction that such a big control isn&rsquo;t necessary, and even if it is, there are probably more usable ways of achieving it.</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif" alt="Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/xull41447azxij46ddrb.gif" alt="Animation showing the pause button appearing right in the middle of the video, when the mouse enters the video player."></p>
 <p>You can summarize this and the previous point as &ldquo;don&rsquo;t rely on mouse position for content.&rdquo;</p>
-
 <h1 id="3-put-the-result-of-an-action-close-to-the-place-where-the-action-was-triggered">3 Put the result of an action close to the place where the action was triggered.</h1>
-
 <p>An example here is <a href="https://m.do.co/c/6e1ff92c19c3">Digital Ocean</a>. (You get $10 in DigitalOcean credit if you sign up through that link, and I get credit if you spend $25)</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/kxtl6wi7npp37avabs8k.gif" alt="" /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/kxtl6wi7npp37avabs8k.gif" alt=""></p>
 <p>In this example, I edit my profile details in a modal in the center of the screen, but a confirmation appears in a <a href="https://ux.stackexchange.com/questions/11998/what-is-a-toast-notification">toast message</a> on the top right.</p>
-
 <p>In the case of the profile, you might also notice that the information displayed in the center has updated, but that&rsquo;s not quickly noticeable. The original place in their dashboard where I encountered this issue was when I first added funds to my account balance via paypal. A message had appeared in the top right, which I had missed, because I was looking in the center, part of the page, hwich contains the main content. My balance didn&rsquo;t immediately update, but I saw the transaction had gone through on Paypal, so for a couple of minutes, I thought there was a bug in DigitalOcean, where they took my money, but didn&rsquo;t give me credit.</p>
-
 <p>I had a similar issue when using the search feature on <a href="https://codepen.io">CodePen</a> after <a href="http://codepen.seesparkbox.com/">their redesign</a>. If you only see the right side of the screen, it&rsquo;s not immediately clear where you should go after clicking the search button.</p>
-
-<p><img src="https://thepracticaldev.s3.amazonaws.com/i/3uevd9z5zev9d8jkvzdq.gif" alt="When you click the search button on the top right on codepen, a huge search bar appears on the left, but that's not visible when you're zoomed in on the right side.." /></p>
-
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/3uevd9z5zev9d8jkvzdq.gif" alt="When you click the search button on the top right on codepen, a huge search bar appears on the left, but that&rsquo;s not visible when you&rsquo;re zoomed in on the right side.."></p>
 <p>Visually, I actually love how the search page looks. It just confused me a bit, the first time I used it</p>
-
-<h1 id="that-s-it">That&rsquo;s it!</h1>
-
+<h1 id="thats-it">That&rsquo;s it!</h1>
 <p>At least as far as I can see. But maybe my view is just too narrow 😊. Are you running into similar other issues in this genre? Do you have remarks on the points I&rsquo;ve covered? Please let me know.</p>
 </div>
 </div>

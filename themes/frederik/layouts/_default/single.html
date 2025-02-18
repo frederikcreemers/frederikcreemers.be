@@ -1,6 +1,6 @@
 {{define "content" }}
 <div class="h-entry">
-    {{if .Title}}<h1 class="p-title"><a href="{{.URL}}">{{.Title}}</a></h1>{{end}}
+    {{if .Title}}<h1 class="p-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h1>{{end}}
     <span class="postdate">
         <i class="fa fa-calendar" aria-hidden></i>
         <time class="dt-published" datetime="{{.Date.Format "2006-12-02 12:30"}}">{{ .Date.Format "January 2, 2006" }}</time>
