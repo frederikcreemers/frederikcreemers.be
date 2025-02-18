@@ -1,0 +1,98 @@
+<head>
+    <title>Hearts</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Made with <3 by Frederik">
+    <!-- minified snippet to load TalkJS without delaying your page -->
+    <script>
+        (function (t, a, l, k, j, s) {
+            s = a.createElement('script'); s.async = 1; s.src = 'https://cdn.talkjs.com/talk.js'; a.head.appendChild(s)
+                ; k = t.Promise; t.Talk = {
+                    v: 3, ready: {
+                        then: function (f) {
+                            if (k) return new k(function (r, e) { l.push([f, r, e]) }); l
+                                .push([f])
+                        }, catch: function () { return k && new k() }, c: l
+                    }
+                };
+        })(window, document, []);
+    </script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: stretch; height: 100vh; font-family: sans-serif;">
+    <div style="height:min-content; flex: 0 0">
+        <h1>Spread the &lt;3!</h1>
+        <p>To share this page with someone and chat with them:</p>
+        <p><label>Share this url: <input type="text" readonly id="urlfield"></label><button id="copy">Copy URL</button></p>
+        <p><label>Username: <input type="text" id="username"></label><button id="setName">update</button></p>
+    </div>
+    <div id="talkjs-container" style="flex-grow: 1"></div>
+    <script>
+        function randomChoice(arr) {
+            return arr[Math.floor(arr.length * Math.random())];
+        }
+
+        function randomId() {
+            let s = "";
+            for (let i = 0; i < 16; i++) {
+                s += randomChoice("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
+            }
+            return s;
+        }
+
+        function randomHeart() {
+            return randomChoice(["❤️", "💛", "💚", "💙", "💜", "🖤", "💔", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟", "❣️", "🫀", "🫰", "🫶"]);
+        }
+
+        setInterval(function () {
+            document.title = "Spread the " + randomHeart();
+        }, 1000);
+
+        let initialName = randomChoice(["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Heidi", "Romeo", "Juliet"]);
+        document.getElementById("username").value = initialName;
+        let conversationId = window.location.hash.substring(1) || randomId();
+        window.location.hash = conversationId;
+        document.getElementById("urlfield").value = window.location.href;
+
+        document.getElementById("copy").addEventListener("click", function () {
+            document.getElementById("urlfield").select();
+            document.execCommand("copy");
+        });
+
+        Talk.ready.then(function () {
+            let me = new Talk.User({
+                id: randomId(),
+                photoUrl: "https://i.pravatar.cc/150?u=" + randomId(),
+                name: initialName
+            });
+
+            session = new Talk.Session({
+                appId: "Hku1c4Pt",
+                me: me
+            });
+
+            let conversationBuilder = session.getOrCreateConversation(conversationId);
+            conversationBuilder.setAttributes({
+                subject: "Share the love! send some messages with <3!",
+                photoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9d/English_pattern_queen_of_hearts.svg",
+                welcomeMessages: ["Send some messages with ```<3``` in them.", "I swear we'll just turn them into totally normal heart emoji."]
+            });
+            conversationBuilder.setParticipant(me);
+            let chatbox = session.createChatbox({theme: "default"});
+            chatbox.select(conversationBuilder);
+            chatbox.mount(document.getElementById("talkjs-container"));
+
+            document.getElementById("setName").addEventListener("click", function () {
+                session.user(me.id).set({
+                    name: document.getElementById("username").value
+                });
+            });
+
+            chatbox.onSendMessage(({message: {text}, override}) => {
+                let replacement = text;
+                while (replacement.includes("<3")) {
+                    replacement = replacement.replace("<3", randomHeart());
+                }
+                override({text: replacement});
+            });
+        });
+    </script>
+</body>

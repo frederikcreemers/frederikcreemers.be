@@ -1,30 +1,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frederik Creemers</title>
-    <link>https://www.frederikcreemers.be/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Frederik Creemers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Apr 2024 22:27:16 +0200</lastBuildDate>
     
-        <atom:link href="https://www.frederikcreemers.be/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Posts</title>
-      <link>https://www.frederikcreemers.be/posts/</link>
+      <link>http://localhost:1313/posts/</link>
       <pubDate>Mon, 22 Apr 2024 22:27:16 +0200</pubDate>
       
-      <guid>https://www.frederikcreemers.be/posts/</guid>
+      <guid>http://localhost:1313/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About Me.</title>
-      <link>https://www.frederikcreemers.be/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 21 Apr 2018 17:25:55 +0200</pubDate>
       
-      <guid>https://www.frederikcreemers.be/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m never sure what to put in &amp;ldquo;bio&amp;rdquo; sections on websites, let alone the &amp;ldquo;About&amp;rdquo; page on my own site. If there&amp;rsquo;s something you want to know about me, &lt;a href=&#34;https://twitter.com/_bigblind&#34;&gt;just ask&lt;/a&gt;, and if it&amp;rsquo;s a question I get often, or I just find it particularly interested, I&amp;rsquo;ll add the answer here.&lt;/p&gt;
 &lt;h2 id=&#34;qa&#34;&gt;Q&amp;amp;A&lt;/h2&gt;
 &lt;h3 id=&#34;how-did-you-get-into-programming&#34;&gt;How did you get into programming?&lt;/h3&gt;
