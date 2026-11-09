@@ -1,4 +1,4 @@
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <head>
     <title>Lay Out Your Code Like You&#39;d Lay Out Your House -- Frederik Creemers</title>
     <meta charset="utf-8">
@@ -17,14 +17,14 @@
 <meta property="og:title" content="Lay Out Your Code Like You&#39;d Lay Out Your House" />
 <meta property="og:description" content="Laying out your code base optimally can have a big impact on how easy it is to understand and maintain." />
 <meta property="og:site_name" content="Frederik Creemers">
-<meta property="og:url" content="http://localhost:1313/posts/code-layout/" />
+<meta property="og:url" content="https://www.frederikcreemers.be/posts/code-layout/" />
 <meta property="og:article:author:first_name" content="Frederik" />
 <meta property="og:article:author:last_name" content="Creemers" />
 <meta property="og:article:published_time" content="2018-07-06 20:28:28 &#43;0200 CEST">
-<meta name="og:image" content="http://localhost:1313/posts/code-layout/floorplan.jpg" />
+<meta name="og:image" content="https://www.frederikcreemers.be/posts/code-layout/floorplan.jpg" />
 
 
-    <link href="http://localhost:1313/css/style.css?h=1739840495" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1794250800" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
@@ -125,9 +125,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <p>So let&rsquo;s have a look at an example code base for a hypothetical blogging application. Since it&rsquo;s a hypothetical code base, I&rsquo;m not using any specific web/database/&hellip; framework here.
 The code will be written in Python, but you don&rsquo;t need to know Python to get the point of this post.</p>
 <p>The structure of the app might look like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -153,7 +153,7 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>BogoBlog/
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>BogoBlog/
 </span></span><span style="display:flex;"><span>├── main.py
 </span></span><span style="display:flex;"><span>├── controllers/
 </span></span><span style="display:flex;"><span>│   ├── posts.py
@@ -180,9 +180,9 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This looks like an <strong>MVC</strong> application. Let&rsquo;s take a look at the <code>controllers/posts.py</code> file:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -231,7 +231,7 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> cool_web_framework <span style="color:#f92672">import</span> BaseController, HttpForbiddenError, HttpNotFoundError,
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> cool_web_framework <span style="color:#f92672">import</span> BaseController, HttpForbiddenError, HttpNotFoundError,
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> storage.posts <span style="color:#f92672">import</span> PostsStore
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> storage.users <span style="color:#f92672">import</span> UsersStore
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> errors.posts <span style="color:#f92672">import</span> PostNotFoundError
@@ -291,9 +291,9 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 <h2 id="lets-fix-this">Let&rsquo;s Fix This!</h2>
 <p><img src="https://frederikcreemers.be/posts/code-layout/refactor.png" alt=""></p>
 <p>Let&rsquo;s group all posts-related functionality together, all users-related functionality together, etc&hellip;</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -312,7 +312,7 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>BogoBlog/
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>BogoBlog/
 </span></span><span style="display:flex;"><span>├── main.py
 </span></span><span style="display:flex;"><span>├── posts/
 </span></span><span style="display:flex;"><span>│   ├── controllers.py
@@ -335,7 +335,8 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 <h2 id="cohesion">Cohesion</h2>
 <p>When talking about what belongs together in a software project, the word <strong>Cohesion</strong> is often used. As we all know, Wikipedia is the source of all truth on the internet, so let&rsquo;s see <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)">what Wikipedia has to say about cohesion</a>.</p>
 <blockquote>
-<p>In <a href="https://en.wikipedia.org/wiki/Computer_programming">computer programming</a>, <strong>cohesion</strong> refers to the degree to which the elements inside a <a href="https://en.wikipedia.org/wiki/Module_(programming)">module</a> belong together.<a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-FOOTNOTEYourdonConstantine1979-1">[1]</a> In one sense, it is a measure of the strength of relationship between the methods and data of a class and some unifying purpose or concept served by that class. In another sense, it is a measure of the strength of relationship between the class’s methods and data themselves.</p></blockquote>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_programming">computer programming</a>, <strong>cohesion</strong> refers to the degree to which the elements inside a <a href="https://en.wikipedia.org/wiki/Module_(programming)">module</a> belong together.<a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-FOOTNOTEYourdonConstantine1979-1">[1]</a> In one sense, it is a measure of the strength of relationship between the methods and data of a class and some unifying purpose or concept served by that class. In another sense, it is a measure of the strength of relationship between the class’s methods and data themselves.</p>
+</blockquote>
 <p>Ok, so <strong>cohesion</strong> just means &ldquo;how much parts of a program belong together&rdquo;. The definition of the term doesn&rsquo;t say anything about how it should be measured, but it is often used without further defining it. People just say you should have &ldquo;high cohesion&rdquo;.</p>
 <p>Later in the same article, there&rsquo;s <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#Types_of_cohesion">a list of different types of cohesion, defined by how they are measured</a>.</p>
 <blockquote>
@@ -343,7 +344,8 @@ The code will be written in Python, but you don&rsquo;t need to know Python to g
 <li><strong>Functional cohesion</strong> is when parts of a module are grouped because they all contribute to a single well-defined task of the module (e.g. Lexical analysis of an XML string).</li>
 </ul>
 <p>[&hellip;]</p>
-<p>Studies by various people including <a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>, <a href="https://en.wikipedia.org/wiki/Edward_Yourdon">Edward Yourdon</a>, and <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a> <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-3">[3]</a> indicate that [&hellip;] and functional cohesion is superior.</p></blockquote>
+<p>Studies by various people including <a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>, <a href="https://en.wikipedia.org/wiki/Edward_Yourdon">Edward Yourdon</a>, and <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a> <a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)#cite_note-3">[3]</a> indicate that [&hellip;] and functional cohesion is superior.</p>
+</blockquote>
 <p>Functional cohesion sounds a lot like what we just did, right? Grouping things by what functionality they contribute to. So when talking about cohesion, please be specific about what type of cohesion you mean.</p>
 <p>I removed a lot of content from this citation because I didn&rsquo;t feel like citing a whole section from Wikipedia and then re-explaining it. I might spend some more time looking into this, and writing another article about cohesion, because I think this Wikipedia article puts too much emphasis on object-oriented programming, and I&rsquo;d love to take a look at what cohesion means at diferent levels of granularity and in different programming paradigms.</p>
 <h2 id="other-considerations">Other Considerations.</h2>

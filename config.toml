@@ -1,10 +1,14 @@
 baseURL = "https://www.frederikcreemers.be/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Frederik Creemers"
 theme = "frederik"
 
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsOptions="linenos=true"
-
 enableGitInfo = true
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+
+[markup.goldmark.renderer]
+unsafe = true

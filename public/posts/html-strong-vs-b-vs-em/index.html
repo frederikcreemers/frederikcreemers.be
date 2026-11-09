@@ -1,4 +1,4 @@
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <head>
     <title>Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them. -- Frederik Creemers</title>
     <meta charset="utf-8">
@@ -17,14 +17,14 @@
 <meta property="og:title" content="Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them." />
 <meta property="og:description" content="" />
 <meta property="og:site_name" content="Frederik Creemers">
-<meta property="og:url" content="http://localhost:1313/posts/html-strong-vs-b-vs-em/" />
+<meta property="og:url" content="https://www.frederikcreemers.be/posts/html-strong-vs-b-vs-em/" />
 <meta property="og:article:author:first_name" content="Frederik" />
 <meta property="og:article:author:last_name" content="Creemers" />
 <meta property="og:article:published_time" content="2024-04-22 22:27:16 &#43;0200 CEST">
 <meta property="og:image" content="https://www.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=200">
 
 
-    <link href="http://localhost:1313/css/style.css?h=1739840495" rel="stylesheet">
+    <link href="https://www.frederikcreemers.be/css/style.css?h=1794250800" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
@@ -125,36 +125,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <blockquote>
 <p>The em element represents stress emphasis of its contents.</p>
 <p>The level of stress that a particular piece of content has is given by its number of ancestor em elements.</p>
-<p>The placement of stress emphasis changes the meaning of the sentence. The element thus forms an integral part of the content. The precise way in which stress is used in this way depends on the language.</p></blockquote>
+<p>The placement of stress emphasis changes the meaning of the sentence. The element thus forms an integral part of the content. The precise way in which stress is used in this way depends on the language.</p>
+</blockquote>
 <p>To illustrate this use, they repeat the same statement about cats, with em tags around various parts of the sentence:</p>
 <blockquote>
 <p><code>&lt;p&gt;&lt;em&gt;Cats&lt;/em&gt; are cute animals.&lt;/p&gt;</code></p>
 <p>Moving the stress to the verb, one highlights that the truth of the entire sentence is in question (maybe someone is saying cats are not cute):</p>
 <p><code>&lt;p&gt;Cats &lt;em&gt;are&lt;/em&gt; cute animals.&lt;/p&gt;</code></p>
-<p>By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone suggested cats were mean animals):</p></blockquote>
+<p>By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone suggested cats were mean animals):</p>
+</blockquote>
 <p>[&hellip;]</p>
 <blockquote>
 <p>Anger mixed with emphasizing the cuteness could lead to markup such as:</p>
-<p><code>&lt;p&gt;&lt;em&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals!&lt;/em&gt;&lt;/p&gt;</code></p></blockquote>
+<p><code>&lt;p&gt;&lt;em&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals!&lt;/em&gt;&lt;/p&gt;</code></p>
+</blockquote>
 <h2 id="the-strong-element">The <code>strong</code> element</h2>
 <p><a href="https://html.spec.whatwg.org/#the-em-element">According to the spec</a>:</p>
 <blockquote>
-<p>The strong element represents strong importance, seriousness, or urgency for its contents.</p></blockquote>
+<p>The strong element represents strong importance, seriousness, or urgency for its contents.</p>
+</blockquote>
 <p>The spec has some examples for each of these cases</p>
 <blockquote>
 <p>Here, the word &ldquo;chapter&rdquo; and the actual chapter number are mere boilerplate, and the actual name of the chapter is marked up with strong:</p>
-<p><code>&lt;h1&gt;Chapter 1: &lt;strong&gt;The Praxis&lt;/strong&gt;&lt;/h1&gt;</code></p></blockquote>
+<p><code>&lt;h1&gt;Chapter 1: &lt;strong&gt;The Praxis&lt;/strong&gt;&lt;/h1&gt;</code></p>
+</blockquote>
 <blockquote>
 <p>Here is an example of a warning notice in a game, with the various parts marked up according to how important they are:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;strong&gt;Avoid the ducks.&lt;/strong&gt; Take any gold you find.
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;strong&gt;Avoid the ducks.&lt;/strong&gt; Take any gold you find.
 </span></span><span style="display:flex;"><span>&lt;strong&gt;&lt;strong&gt;Do not take any of the diamonds&lt;/strong&gt;,
 </span></span><span style="display:flex;"><span>they are explosive and &lt;strong&gt;will destroy anything within
 </span></span><span style="display:flex;"><span>ten meters.&lt;/strong&gt;&lt;/strong&gt; You have been warned.&lt;/p&gt;```
@@ -163,9 +168,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </div></blockquote>
 <blockquote>
 <p>n this example, the strong element is used to denote the part of the text that the user is intended to read first.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -173,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;p&gt;Your tasks for today:&lt;/p&gt;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;p&gt;Your tasks for today:&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;ul&gt;
 </span></span><span style="display:flex;"><span> &lt;li&gt;&lt;p&gt;&lt;strong&gt;Turn off the oven.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
 </span></span><span style="display:flex;"><span> &lt;li&gt;&lt;p&gt;Put out the trash.&lt;/p&gt;&lt;/li&gt;

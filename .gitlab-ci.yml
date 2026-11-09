@@ -1,4 +1,6 @@
-image: monachus/hugo
+image:
+  name: ghcr.io/gohugoio/hugo:v0.169.0
+  entrypoint: [""]
 
 pages:
   script:
