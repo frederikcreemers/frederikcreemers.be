@@ -1,7 +1,7 @@
 ---
-title: "Attention! <strong> VS. <b> vs <em>, and when to use them."
+title: "Attention! <strong> vs. <b> vs. <em>, and when to use them."
 date: 2024-04-22T22:27:16+02:00
-draft: false
+draft: true
 ---
 
 The HTML elements `<strong>`, `<b>`, and `<em>` seem to serve a very similar function: to emphasize, or draw attention to, a particular part of the content.
@@ -9,7 +9,7 @@ The HTML elements `<strong>`, `<b>`, and `<em>` seem to serve a very similar fun
 I didn't like any of the top search results when googling this, because all I wanted was a quick summary of what the spec has to say on this. So, I made one.
 
 
-## The `pre` element
+## The `em` element
 
 From [The relevant section in the HTML spec](https://html.spec.whatwg.org/#the-em-element)
 

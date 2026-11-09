@@ -5,89 +5,10 @@
     <description>Recent content in Posts on Frederik Creemers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 22 Apr 2024 22:27:16 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 22:27:16 +0200</lastBuildDate>
     
         <atom:link href="https://www.frederikcreemers.be/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Attention! &lt;strong&gt; VS. &lt;b&gt; vs &lt;em&gt;, and when to use them.</title>
-      <link>https://www.frederikcreemers.be/posts/html-strong-vs-b-vs-em/</link>
-      <pubDate>Mon, 22 Apr 2024 22:27:16 +0200</pubDate>
-      
-      <guid>https://www.frederikcreemers.be/posts/html-strong-vs-b-vs-em/</guid>
-      <description>&lt;p&gt;The HTML elements &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; seem to serve a very similar function: to emphasize, or draw attention to, a particular part of the content.&lt;/p&gt;
-&lt;p&gt;I didn&amp;rsquo;t like any of the top search results when googling this, because all I wanted was a quick summary of what the spec has to say on this. So, I made one.&lt;/p&gt;
-&lt;h2 id=&#34;the-pre-element&#34;&gt;The &lt;code&gt;pre&lt;/code&gt; element&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&#34;https://html.spec.whatwg.org/#the-em-element&#34;&gt;The relevant section in the HTML spec&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The em element represents stress emphasis of its contents.&lt;/p&gt;
-&lt;p&gt;The level of stress that a particular piece of content has is given by its number of ancestor em elements.&lt;/p&gt;
-&lt;p&gt;The placement of stress emphasis changes the meaning of the sentence. The element thus forms an integral part of the content. The precise way in which stress is used in this way depends on the language.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;To illustrate this use, they repeat the same statement about cats, with em tags around various parts of the sentence:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Cats&amp;lt;/em&amp;gt; are cute animals.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Moving the stress to the verb, one highlights that the truth of the entire sentence is in question (maybe someone is saying cats are not cute):&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;Cats &amp;lt;em&amp;gt;are&amp;lt;/em&amp;gt; cute animals.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone suggested cats were mean animals):&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Anger mixed with emphasizing the cuteness could lead to markup such as:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Cats are &amp;lt;em&amp;gt;cute&amp;lt;/em&amp;gt; animals!&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;the-strong-element&#34;&gt;The &lt;code&gt;strong&lt;/code&gt; element&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://html.spec.whatwg.org/#the-em-element&#34;&gt;According to the spec&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The strong element represents strong importance, seriousness, or urgency for its contents.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The spec has some examples for each of these cases&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Here, the word &amp;ldquo;chapter&amp;rdquo; and the actual chapter number are mere boilerplate, and the actual name of the chapter is marked up with strong:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;h1&amp;gt;Chapter 1: &amp;lt;strong&amp;gt;The Praxis&amp;lt;/strong&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Here is an example of a warning notice in a game, with the various parts marked up according to how important they are:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;strong&amp;gt;Avoid the ducks.&amp;lt;/strong&amp;gt; Take any gold you find.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;strong&amp;gt;&amp;lt;strong&amp;gt;Do not take any of the diamonds&amp;lt;/strong&amp;gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;they are explosive and &amp;lt;strong&amp;gt;will destroy anything within
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ten meters.&amp;lt;/strong&amp;gt;&amp;lt;/strong&amp;gt; You have been warned.&amp;lt;/p&amp;gt;```
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;n this example, the strong element is used to denote the part of the text that the user is intended to read first.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;
-&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
-&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;p&amp;gt;Your tasks for today:&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Turn off the oven.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Put out the trash.&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Do the laundry.&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;the-b-element&#34;&gt;The &lt;code&gt;b&lt;/code&gt; element&lt;/h2&gt;
-</description>
-    </item>
     
     <item>
       <title>Step Outside Your Comfort Zone in a Trusted Environment</title>
