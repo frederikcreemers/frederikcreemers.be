@@ -6,9 +6,13 @@
         {{ .Content }}
         <hr />
     {{ end }}
-    {{ range .Pages }}
+    {{- $pages := .Pages -}}
+    {{- if .IsHome -}}
+        {{- $pages = (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+    {{- end -}}
+    {{ range $pages }}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         <span class="postdate"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ .Date.Format "January 2, 2006" }}</span><br />
         {{ .Summary }}
-    {{ end }}
+    {{- end }}
 {{ end }}
