@@ -390,7 +390,7 @@ The code will be written in Python, but you don&amp;rsquo;t need to know Python 
 &lt;li&gt;&lt;strong&gt;Don&amp;rsquo;t nest too deeply&lt;/strong&gt;. Directories make it easier to find things, but they have the disadvantage that you need to remember where files are. Most places that display a list of files can do so in alphabetical order based on the file name. And it&amp;rsquo;s quite easy to find a file in a sorted list, whereas it requires much more mental cycles to remember a deeply nested structure of files and folders.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;thanks-for-reading&#34;&gt;Thanks for reading!&lt;/h2&gt;
-&lt;p&gt;Please let me know what you think &lt;a href=&#34;https://twitter.com/_bigblind&#34;&gt;on Twitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please let me know what you think &lt;a href=&#34;https://bsky.app/profile/bigblind.me&#34;&gt;on Bluesky&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

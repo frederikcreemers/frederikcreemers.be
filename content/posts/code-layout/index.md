@@ -165,4 +165,4 @@ I removed a lot of content from this citation because I didn't feel like citing 
 
 ## Thanks for reading!
 
-Please let me know what you think [on Twitter](https://twitter.com/_bigblind)
+Please let me know what you think [on Bluesky](https://bsky.app/profile/bigblind.me)
