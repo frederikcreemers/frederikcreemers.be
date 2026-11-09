@@ -25,7 +25,7 @@
 
 
     <link href="https://www.frederikcreemers.be/css/style.css?h=1794250800" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" rel="stylesheet" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous">
 <link rel="icon" href="https://s.gravatar.com/avatar/5e4575fdaacc879dc2199490417d170a?s=64" />
 <link rel="pingback" href="https://webmention.io/www.frederikcreemers.be/xmlrpc" />
 <link rel="webmention" href="https://webmention.io/www.frederikcreemers.be/webmention" />
@@ -66,14 +66,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </head>
 <body>
     <header class="mobile-only" id="mobile-header">
-      <button id="open-nav" class="mobile-only">
-          <i class="fa fa-bars" aria-label="Open menu"></i>
+      <button id="open-nav" aria-label="Open menu" class="mobile-only">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
       <span class="site-title">Frederik Creemers</span>
     </header>
     <nav id="nav">
-      <button class="fr mobile-only" id="close-nav">
-        <i class="fa fa-times" aria-label="Close menu"></i>
+      <button class="fr mobile-only" id="close-nav" aria-label="Close menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
       <a class="site-title h-card u-url u-uid" href="http://www.frederikcreemers.be">
         <span class="p-name">Frederik Creemers</span>
@@ -82,22 +82,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
       <ul id="menu">
         <li>
           <a href="/">
-            Blog<i class="fa fa-rss"></i>
+            Blog<i class="fa-solid fa-rss" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="/about">
-            About<i class="fa fa-user"></i>
+            About<i class="fa-solid fa-user" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://github.com/bigblind" rel="me">
-            Github<i class="fa fa-github"></i>
+            Github<i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://twitter.com/_bigblind" rel="me">
-            Twitter<i class="fa fa-twitter"></i>
+            Twitter<i class="fa-brands fa-twitter" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <div class="h-entry">
     <h1 class="p-title"><a href="/posts/programming-by-wishful-thinking/">Programming by Wishful Thinking</a></h1>
     <span class="postdate">
-        <i class="fa fa-calendar" aria-hidden></i>
+        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
         <time class="dt-published" datetime="2017-106-06 106:30">October 6, 2017</time>
     </span>
     <hr />
