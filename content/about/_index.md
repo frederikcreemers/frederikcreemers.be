@@ -15,7 +15,7 @@ When I was bored in class, I used to make little mouse-maze games using Microsof
 
 ### Why is your username "bigblind"? Are you a poker player?
 
-I use [@bigblind.me on Bluesky](https://bsky.app/profile/bigblind.me). My username on [github](https://github.com/bigblind) and many other sites and platforms around the web, is <strong>bigblind</strong>. This username came about the first time I played poker. I played with my newhew and a couple of his friends, and the first time I was the [big blind](https://en.wikipedia.org/wiki/Blind_(poker)), we all laughed about it, because I'm visually impaired, and not in any dimension a small guy.
+I use [@bigblind.me on Bluesky](https://bsky.app/profile/bigblind.me). On [GitHub](https://github.com/frederikcreemers), I use <strong>frederikcreemers</strong>. My username on many other sites and platforms around the web is <strong>bigblind</strong>. This username came about the first time I played poker. I played with my newhew and a couple of his friends, and the first time I was the [big blind](https://en.wikipedia.org/wiki/Blind_(poker)), we all laughed about it, because I'm visually impaired, and not in any dimension a small guy.
 
 ### In what way are you visually impaired?
 
